@@ -1,0 +1,43 @@
+.event {
+  .container {
+    border: 1px solid $pink;
+  }
+  &__text-flex {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    font-weight: normal;
+    font-family: "小塚ゴシック Pr6N", "Noto Sans JP", sans-serif;
+    h3 {
+      font-size: 34px;
+    }
+    p {
+      font-size: 24px;
+    }
+    span {
+      font-size: 34px;
+      font-weight: bold;
+    }
+  }
+  &__pink,
+  &__green {
+    margin: 0 auto;
+    padding: 80px 120px 100px;
+    text-align: center;
+  }
+  &__pink {
+    color: $pink;
+    span {
+      background-color: $pink;
+      color: #ffff00;
+    }
+  }
+  &__green {
+    color: #3eff00;
+    span {
+      background-color: #3eff00;
+      color: #000;
+    }
+  }
+}

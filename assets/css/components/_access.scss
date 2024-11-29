@@ -1,0 +1,62 @@
+.access {
+  .container {
+    border: 1px solid $pink;
+  }
+  &__store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0 120px 0;
+    gap: 60px 50px;
+    font-family: "小塚ゴシック Pr6N", "Noto Sans JP", sans-serif;
+    font-weight: normal;
+
+    &-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      &-tel {
+        font-size: 22px;
+        font-family: serif;
+        span {
+          font-size: 35px;
+        }
+      }
+    }
+
+    &-map {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h4 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .map-img {
+        width: 520px;
+        height: 380px;
+        @include pc {
+          width: calc(520vw / (1200 / 100));
+          height: calc(380vw / (1200 / 100));
+        }
+        @include tab {
+          width: calc(600vw / (768 / 100));
+          height: calc(450vw / (768 / 100));
+        }
+      }
+    }
+  }
+}

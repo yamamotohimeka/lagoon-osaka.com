@@ -1,0 +1,18 @@
+.diary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 40px 0;
+  border-bottom: 1px dashed #595757;
+  font-family: "Noto Sans JP", sans-serif;
+  &-date {
+    font-size: 13px;
+  }
+  &-name {
+    color: $pink;
+    font-size: 17px;
+  }
+  &-text {
+    font-size: 14px;
+  }
+}

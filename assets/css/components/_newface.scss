@@ -1,0 +1,60 @@
+.newface {
+  &__list {
+    padding: 0 20px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid $pink;
+    height: 1800px;
+    overflow: auto;
+  }
+  &Card {
+    .girlCard-frame {
+      display: flex;
+      gap: 20px;
+      padding: 40px 0;
+      border-bottom: 1px #595757 dashed;
+
+      .mark {
+        top: -37px;
+      }
+    }
+
+    &-description {
+      font-size: 15px;
+      text-align: left;
+      line-height: 1.7;
+      width: 285px;
+    }
+
+    &-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &-info {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+
+      &-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .girlCard {
+        &-name {
+          font-size: 20px;
+          padding: 22px 0 0;
+        }
+      }
+    }
+  }
+}
