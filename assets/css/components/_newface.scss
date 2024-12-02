@@ -7,6 +7,10 @@
     border: 1px solid $pink;
     height: 1800px;
     overflow: auto;
+    @include pc {
+      padding: 0;
+      height: calc(1800vw / (1200 / 100));
+    }
   }
   &Card {
     .girlCard-frame {
@@ -14,9 +18,16 @@
       gap: 20px;
       padding: 40px 0;
       border-bottom: 1px #595757 dashed;
+      @include pc {
+        gap: calc(20vw / (1200 / 100));
+        padding: calc(40vw / (1200 / 100)) 0;
+      }
 
       .mark {
         top: -37px;
+        @include pc {
+          top: calc(-37vw / (1200 / 100));
+        }
       }
     }
 
@@ -25,6 +36,10 @@
       text-align: left;
       line-height: 1.7;
       width: 285px;
+      @include pc {
+        font-size: calc(15vw / (1200 / 100));
+        width: calc(285vw / (1200 / 100));
+      }
     }
 
     &-flex {
@@ -33,6 +48,9 @@
       justify-content: space-between;
       flex-direction: column;
       gap: 5px;
+      @include pc {
+        gap: calc(5vw / (1200 / 100));
+      }
     }
 
     &-info {
@@ -41,18 +59,27 @@
       flex-direction: column;
       justify-content: flex-start;
       gap: 10px;
-
+      @include pc {
+        gap: calc(10vw / (1200 / 100));
+      }
       &-flex {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+        @include pc {
+          gap: calc(5vw / (1200 / 100));
+        }
       }
 
       .girlCard {
         &-name {
           font-size: 20px;
           padding: 22px 0 0;
+          @include pc {
+            font-size: calc(20vw / (1200 / 100));
+            padding: calc(22vw / (1200 / 100)) 0 0;
+          }
         }
       }
     }

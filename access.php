@@ -76,8 +76,5 @@ include $path . 'components/header.php';
 
     </div>
   </div>
-  </div>
-  <div id="page-top" class="mouse_footer">
-  </div>
 </main>
 <?php include $path . 'components/footer.php';?>

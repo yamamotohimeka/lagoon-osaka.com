@@ -132,10 +132,6 @@
 
       <div class="profile__space"></div>
     </div>
-    <div id="page-top" class="mouse_footer">
-    </div>
-    <div id="page-top" class="mouse_footer">
-    </div>
   </main>
   <footer class="footer pc">
     <div class="footer__main">

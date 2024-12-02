@@ -21,57 +21,12 @@ h2 {
   }
 }
 
-.mouse_footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 100px;
-  bottom: 60px;
-  width: 160px;
-  height: 160px;
-  cursor: pointer;
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(50px);
-  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
-  background: url(../img/mouse-footer.png) no-repeat center;
-  background-size: contain;
-  @include pc {
-    right: calc(20vw / (1200 / 100));
-    bottom: calc(20vw / (1200 / 100));
-    width: calc(130vw / (1200 / 100));
-    height: calc(130vw / (1200 / 100));
-  }
-  @include tab {
-    width: calc(110vw / (768 / 100));
-    height: calc(110vw / (768 / 100));
-  }
-}
 .show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
-#page-top.floatAnime {
-  background: url("../img/mouse.png") no-repeat center;
-  background-size: contain;
-  width: 230px;
-  height: 230px;
-  animation: floatAnime 2s linear infinite;
 
-  @include pc {
-    width: calc(140vw / (768 / 100));
-    height: calc(140vw / (768 / 100));
-  }
-  @include tab {
-    width: calc(150vw / (768 / 100));
-    height: calc(150vw / (768 / 100));
-    right: 0;
-    bottom: 0;
-  }
-}
 @keyframes floatAnime {
   0% {
     transform: translateX(0);
@@ -109,12 +64,18 @@ html {
   &::-webkit-scrollbar {
     width: 12px; // スクロールバーの幅
     background-color: $pink; // 背景色
+    @include pc {
+      width: calc(12vw / (1200 / 100));
+    }
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: #ffffff; // バーの色
     border-radius: 10px; // ボーダー半径
     height: 10px;
+    @include pc {
+      height: calc(10vw / (1200 / 100));
+    }
   }
 }
 
@@ -217,7 +178,8 @@ main {
   max-width: 1200px;
   @include center;
   @include pc {
-    max-width: calc(1280vw / (1200 / 100));
+    max-width: calc(1200vw / (1200 / 100));
+    padding: 0 calc(20vw / (1200 / 100));
   }
 }
 main {

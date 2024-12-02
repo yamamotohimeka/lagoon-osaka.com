@@ -7,12 +7,29 @@
   font-family: "Noto Sans JP", sans-serif;
   &-date {
     font-size: 13px;
+    @include pc {
+      font-size: calc(13vw / (1200 / 100));
+    }
   }
   &-name {
     color: $pink;
     font-size: 17px;
+    @include pc {
+      font-size: calc(17vw / (1200 / 100));
+    }
   }
   &-text {
     font-size: 14px;
+    @include pc {
+      font-size: calc(14vw / (1200 / 100));
+    }
+  }
+  &-img {
+    img {
+      width: 100%;
+      @include pc {
+        width: calc(392vw / (1200 / 100));
+      }
+    }
   }
 }

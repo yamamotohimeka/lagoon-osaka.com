@@ -46,7 +46,7 @@
       </div>
       <div class="header__info">
         <div class="header__info-logo">
-          <h1> <a href="<?php echo $path; ?>"><img src="<?php echo $path; ?>assets/img/logo.png" alt=""></a></h1>
+          <a href="<?php echo $path; ?>"><img src="<?php echo $path; ?>assets/img/logo.png" alt="ラ・グーン"></a>
         </div>
 
         <div class="header__info-tel">

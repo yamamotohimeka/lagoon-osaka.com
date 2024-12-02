@@ -1,93 +1,86 @@
 .footer {
-  position: relative;
-  &__main {
-    padding-bottom: 26px;
-    text-align: center;
-    font-family: vdl-v7marugothic, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    @include pc {
-      padding-bottom: calc(26vw / (1200 / 100));
-    }
-    @include tab {
-      text-align: left;
-    }
-    &__nav {
-      padding: 70px 0 70px;
-      @include pc {
-        padding: calc(32vw / (1200 / 100)) 0 calc(56vw / (1200 / 100));
-      }
-      &__list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.08em;
-        font-size: 20px;
-        @include pc {
-          font-size: calc(20vw / (1200 / 100));
-        }
-        li {
-          border-right: #fff 1px solid;
-          padding: 0 30px;
-          font-family: "Hiragino Sans", "ヒラギノ角ゴシック";
-          font-weight: 300;
-          @include pc {
-            padding: 0 calc(20vw / (1200 / 100));
-          }
-          &:last-of-type {
-            border-right: none;
-          }
-        }
-      }
-    }
+  padding: 120px 0 30px;
+  @include pc {
+    padding: calc(120vw / (1200 / 100)) 0 calc(30vw / (1200 / 100));
   }
-
-  small {
-    text-align: left;
-    margin-left: calc(50vw / (768 / 100));
-    @include tab {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-  &-top {
-    position: absolute;
-    bottom: calc(70vw / (768 / 100));
-    right: calc(70vw / (768 / 100));
-    img {
-      width: calc(100vw / (768 / 100));
-    }
-  }
-  &__space {
-    height: calc(140vw / (768 / 100));
-  }
-  &__nav__list {
-    display: flex;
+  &__info {
+    display: inline-flex;
     justify-content: space-between;
-    margin: 40px auto 100px;
-    width: 1100px;
-    font-size: 22px;
-    letter-spacing: 0.1em;
-    color: #fff;
-    a {
-      &:hover {
-        color: #d8d8d8;
+    flex-direction: column;
+    gap: 20px;
+    @include pc {
+      gap: calc(20vw / (1200 / 100));
+    }
+    &-tel {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      @include pc {
+        font-size: calc(22vw / (1200 / 100));
+      }
+      a {
+        span {
+          font-size: 35px;
+          @include pc {
+            font-size: calc(35vw / (1200 / 100));
+          }
+        }
       }
     }
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    &__wrap {
+      padding: 38px 16px 27px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include pc {
+        padding: calc(38vw / (1200 / 100)) calc(16vw / (1200 / 100))
+          calc(27vw / (1200 / 100));
+      }
+    }
+  }
+  &__nav {
+    &__logo {
+      img {
+        width: 518px;
+        @include pc {
+          width: calc(518vw / (1200 / 100));
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      @include pc {
+        font-size: calc(14vw / (1200 / 100));
+      }
+
+      a {
+        &:hover {
+          color: #d8d8d8;
+        }
+      }
+    }
+  }
+  &__recruit {
+    background-color: #323232;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
     @include pc {
-      margin: calc(40vw / (1200 / 100)) auto calc(100vw / (1200 / 100));
-      width: calc(1100vw / (1200 / 100));
-      font-size: calc(22vw / (1200 / 100));
-    }
-    @include tab {
-      padding-top: calc(50vw / (768 / 100));
-      margin: calc(00vw / (768 / 100)) auto calc(60vw / (768 / 100));
-      font-size: calc(19vw / (768 / 100));
-    }
-    .border {
-      width: 1px;
-      background: #fff;
+      padding: calc(10vw / (1200 / 100)) 0;
+      font-size: calc(16vw / (1200 / 100));
     }
   }
 }

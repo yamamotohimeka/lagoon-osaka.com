@@ -1,30 +1,41 @@
 <footer class="footer">
-  <div class="footer__main">
-    <div class="container pc">
-      <nav class="footer__main__nav pc">
-        <ul class="footer__main__nav__list">
-          <li><a href="<?php echo $path; ?>">TOP</a></li>
-          <li><a href="<?php echo $path; ?>girl.php">女の子一覧</a>
-          </li>
-          <li><a href="<?php echo $path; ?>schedule.php">出勤情報</a></li>
-          <li><a href="<?php echo $path; ?>price.php">システム</a>
-          </li>
-          <li><a href="<?php echo $path; ?>event.php">イベント</a>
-          </li>
-          <li><a href="<?php echo $path; ?>access.php">アクセス</a></li>
-          <li>
-            <a target="_blank" href="../recruit" class="footer__link">
-              <p>求人サイト</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-
-
+  <div class="container pc">
+    <div class="footer__flex__wrap">
+      <div class="footer__info">
+        <div class="footer__nav__logo">
+          <img src="<?php echo $path; ?>assets/img/logo.png" alt="ラグーン">
+        </div>
+        <div class="footer__info-tel">
+          <a href="tel:0120-947-854">TEL/<span>0120-947-854</span></a>
+          <p>24時間営業</p>
+        </div>
       </div>
-      <small>Copyright(C) hand club All Right Reserved.</small>
-      <div class="footer__space tab"></div>
+
+      <div class="footer__flex">
+        <nav class="footer__nav">
+          <ul class="footer__nav__list">
+            <li><a href="<?php echo $path; ?>">トップ</a></li>
+            <li><a href="<?php echo $path; ?>girl.php">女の子一覧</a>
+            </li>
+            <li><a href="<?php echo $path; ?>schedule.php">出勤情報</a></li>
+            <li>
+              <a href="<?php echo $path; ?>newface.php">新人情報</a>
+            </li>
+            <li><a href="<?php echo $path; ?>event.php">イベント</a>
+            </li>
+            <li><a href="<?php echo $path; ?>access.php">アクセス</a></li>
+            <li><a href="<?php echo $path; ?>system.php">システム</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__recruit">
+          <a target="_blank" href="../recruit" class="footer__link">
+            <p>求人サイト</p>
+          </a>
+        </div>
+      </div>
+
+
     </div>
     <div class="container tab">
       <div class="footer__nav">
@@ -74,10 +85,9 @@
           </li>
         </ul>
       </div>
-      <small>Copyright(C) hand club All Right Reserved.</small>
     </div>
-  </div>
 
+  </div>
 </footer>
 
 

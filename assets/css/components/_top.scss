@@ -2,16 +2,25 @@
   &__main {
     display: flex;
     justify-content: space-between;
+    @include pc {
+      gap: calc(20vw / (1200 / 100));
+    }
 
     .top {
       &__event {
         width: 774px;
+        @include pc {
+          width: calc(774vw / (1200 / 100));
+        }
 
         .top-swipper {
           width: 100%;
           overflow: hidden;
           position: relative;
           padding-bottom: 50px;
+          @include pc {
+            padding-bottom: calc(50vw / (1200 / 100));
+          }
         }
 
         .swiper {
@@ -38,6 +47,10 @@
             padding: 10px 0;
             gap: 10px;
             position: absolute;
+            @include pc {
+              gap: calc(10vw / (1200 / 100));
+              padding: calc(10vw / (1200 / 100)) 0;
+            }
 
             &-bullet {
               width: 19px;
@@ -46,6 +59,11 @@
               border-radius: 50%;
               margin: 0 5px;
               opacity: 1;
+              @include pc {
+                height: calc(19vw / (1200 / 100));
+                width: calc(19vw / (1200 / 100));
+                margin: 0 calc(5vw / (1200 / 100));
+              }
 
               &-active {
                 background-color: #ff67a3;
@@ -61,6 +79,9 @@
 
       &__news {
         width: 392px;
+        @include pc {
+          width: calc(392vw / (1200 / 100));
+        }
 
         &-text {
           font-family: "小塚ゴシック Pr6N", sans-serif;
@@ -72,12 +93,23 @@
           height: 457px;
           font-size: 19px;
           border: 1px solid $pink;
+          @include pc {
+            height: auto;
+            padding: calc(20vw / (1200 / 100));
+            font-size: calc(19vw / (1200 / 100));
+          }
           span {
             color: #ff2cff;
             font-size: 23px;
+            @include pc {
+              font-size: calc(23vw / (1200 / 100));
+            }
           }
           img {
             width: 324px;
+            @include pc {
+              width: calc(324vw / (1200 / 100));
+            }
           }
           p:nth-of-type(3) {
             font-size: 14px; // 3番目のpテキストのフォントサイズを指定
@@ -91,6 +123,9 @@
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
+    @include pc {
+      gap: calc(20vw / (1200 / 100));
+    }
 
     .top {
       &__cast__box__list {
@@ -98,7 +133,10 @@
         padding: 0 30px;
         height: 1550px;
         overflow: auto;
-
+        @include pc {
+          height: calc(1550vw / (1200 / 100));
+          padding: 0 calc(30vw / (1200 / 100));
+        }
         .link-girl {
           text-align: right;
           p {
@@ -108,13 +146,20 @@
       }
       &__schedule {
         width: 774px;
+        @include pc {
+          width: calc(774vw / (1200 / 100));
+        }
 
         .section-title {
           h2 {
             display: flex;
             justify-content: space-between;
+
             span {
               padding-right: 30px;
+              @include pc {
+                padding-right: calc(30vw / (1200 / 100));
+              }
             }
           }
         }
@@ -122,12 +167,19 @@
 
       &__diary {
         width: 392px;
+        @include pc {
+          width: calc(392vw / (1200 / 100));
+        }
 
         &-list {
           border: 1px solid $pink;
           padding: 0 30px;
           height: 1550px;
           overflow: auto;
+          @include pc {
+            padding: 0 calc(30vw / (1200 / 100));
+            height: calc(1550vw / (1200 / 100));
+          }
         }
       }
     }

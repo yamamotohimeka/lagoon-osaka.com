@@ -3,6 +3,10 @@
     padding-bottom: 100px;
     border: 1px solid $pink;
     padding: 0 120px;
+    @include pc {
+      padding-bottom: calc(100vw / (1200 / 100));
+      padding: 0 calc(120vw / (1200 / 100));
+    }
   }
   .pagination {
     display: flex;
@@ -10,11 +14,16 @@
     justify-content: center;
     margin: 90px 0 60px;
     color: $pink;
-
+    @include pc {
+      margin: calc(90vw / (1200 / 100)) 0 calc(60vw / (1200 / 100));
+    }
     a {
       text-decoration: none;
       color: gray;
       margin: 0 5px;
+      @include pc {
+        margin: 0 calc(5vw / (1200 / 100));
+      }
       &.active {
         color: $pink;
         font-weight: bold;
@@ -27,6 +36,9 @@
     span {
       margin: 0 10px;
       font-weight: bold;
+      @include pc {
+        margin: 0 calc(10vw / (1200 / 100));
+      }
     }
   }
 }
@@ -38,6 +50,11 @@
       justify-content: flex-start;
       flex-wrap: wrap;
       gap: 14px 10.5px;
+      padding: 0 30px;
+      @include pc {
+        gap: calc(14vw / (1200 / 100)) calc(10.5vw / (1200 / 100));
+        padding: 0;
+      }
     }
   }
 }
@@ -57,12 +74,19 @@
       justify-content: center;
       z-index: 1;
       padding-top: 50px;
+      @include pc {
+        padding-top: calc(50vw / (1200 / 100));
+      }
     }
     img {
       position: relative;
       z-index: 1;
       width: 216px;
       height: 285px;
+      @include pc {
+        width: calc(216vw / (1200 / 100));
+        height: calc(285vw / (1200 / 100));
+      }
     }
     .girlCard-info {
       position: relative;
@@ -76,7 +100,7 @@
           margin-top: calc(-1vw / (1200 / 100));
           margin-bottom: calc(8vw / (1200 / 100));
           padding: calc(4vw / (1200 / 100)) 0 calc(6vw / (1200 / 100));
-          width: calc(250vw / (1200 / 100));
+          width: calc(216vw / (1200 / 100));
         }
         @include tab {
           margin-bottom: calc(12vw / (768 / 100));
@@ -89,6 +113,12 @@
           right: 10px;
           width: 50px;
           height: 25px;
+          @include pc {
+            top: calc(-61vw / (1200 / 100));
+            right: calc(10vw / (1200 / 100));
+            width: calc(50vw / (1200 / 100));
+            height: calc(25vw / (1200 / 100));
+          }
         }
       }
       &-store {
@@ -133,7 +163,7 @@
             margin-top: calc(-1vw / (1200 / 100));
             padding: calc(8vw / (1200 / 100)) 0 calc(6vw / (1200 / 100)) 0;
             gap: calc(4vw / (1200 / 100));
-            width: calc(250vw / (1200 / 100));
+            width: calc(216vw / (1200 / 100));
             font-size: calc(18vw / (1200 / 100));
           }
           @include tab {
@@ -166,7 +196,9 @@
         padding-top: 8px;
         margin-bottom: 6px;
         font-size: 20px;
-
+        @include pc {
+          font-size: calc(20vw / (1200 / 100));
+        }
         @include tab {
           gap: calc(14vw / (768 / 100));
           padding-top: calc(14vw / (768 / 100));
@@ -175,6 +207,9 @@
         }
         p {
           font-size: 20px;
+          @include pc {
+            font-size: calc(20vw / (1200 / 100));
+          }
           @include tab {
             font-size: calc(26vw / (768 / 100));
           }
@@ -182,6 +217,9 @@
       }
       &-size {
         font-size: 15px;
+        @include pc {
+          font-size: calc(15vw / (1200 / 100));
+        }
       }
     }
     .girlCard-time {
@@ -189,6 +227,9 @@
       font-size: 20px;
       letter-spacing: 0.1em;
       color: $pink;
+      @include pc {
+        font-size: calc(20vw / (1200 / 100));
+      }
     }
     .girlCard-type {
       display: flex;
@@ -203,6 +244,11 @@
         width: 105px;
         font-size: 14px;
         background: $pink;
+        @include pc {
+          padding: calc(5vw / (1200 / 100)) 0;
+          width: calc(105vw / (1200 / 100));
+          font-size: calc(14vw / (1200 / 100));
+        }
       }
       .orange {
         background: #ff6161;

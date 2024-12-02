@@ -5,25 +5,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include pc {
+      padding: calc(6vw / (1200 / 100)) calc(16vw / (1200 / 100)) 0;
+    }
     h1 {
       letter-spacing: 2.8px;
       font-size: 14px;
       color: #fff;
+      @include pc {
+        font-size: calc(14vw / (1200 / 100));
+      }
     }
   }
   &__info {
     display: flex;
     justify-content: space-between;
     padding: 38px 16px 27px;
-
+    @include pc {
+      padding: calc(38vw / (1200 / 100)) calc(16vw / (1200 / 100))
+        calc(27vw / (1200 / 100));
+    }
+    &-logo {
+      img {
+        width: 518px;
+        @include pc {
+          width: calc(518vw / (1200 / 100));
+        }
+      }
+    }
     &-tel {
       display: flex;
       align-items: flex-end;
       gap: 10px;
       font-size: 22px;
+      @include pc {
+        font-size: calc(22vw / (1200 / 100));
+        gap: calc(10vw / (1200 / 100));
+      }
       a {
         span {
-          font-size: 35px;
+          @include pc {
+            font-size: calc(35vw / (1200 / 100));
+          }
         }
       }
     }
@@ -40,8 +63,8 @@
       -webkit-text-fill-color: transparent;
 
       &-link {
-        width: 100%;
         padding: 11px;
+        width: 100%;
         border-bottom: 2px solid transparent;
         border-image: linear-gradient(
           0deg,
@@ -69,8 +92,15 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          font-size: 16px;
+          @include pc {
+            font-size: calc(16vw / (1200 / 100));
+          }
           span {
             font-size: 12px;
+            @include pc {
+              font-size: calc(12vw / (1200 / 100));
+            }
           }
         }
       }
