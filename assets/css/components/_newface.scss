@@ -11,8 +11,43 @@
       padding: 0;
       height: calc(1800vw / (1200 / 100));
     }
+    @include tab {
+      border: none;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
   }
   &Card {
+    &-flexWrap {
+      @include tab {
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        margin: 0 auto;
+        gap: calc(40vw / (768 / 100));
+      }
+    }
+    &-fee {
+      font-size: 16px;
+      @include pc {
+        font-size: calc(16vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(28vw / (768 / 100));
+        padding: calc(4vw / (768 / 100)) 0 calc(8vw / (768 / 100));
+      }
+    }
+    &-date {
+      font-size: 16px;
+      @include pc {
+        font-size: calc(16vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(28vw / (768 / 100));
+        padding-bottom: calc(20vw / (768 / 100));
+      }
+    }
     .girlCard-frame {
       display: flex;
       gap: 20px;
@@ -22,11 +57,18 @@
         gap: calc(20vw / (1200 / 100));
         padding: calc(40vw / (1200 / 100)) 0;
       }
+      @include tab {
+        flex-direction: column;
+        padding: calc(60vw / (768 / 100)) 0;
+      }
 
       .mark {
         top: -37px;
         @include pc {
           top: calc(-37vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(-47vw / (768 / 100));
         }
       }
     }
@@ -39,6 +81,11 @@
       @include pc {
         font-size: calc(15vw / (1200 / 100));
         width: calc(285vw / (1200 / 100));
+      }
+      @include tab {
+        width: 80%;
+        margin: 0 auto;
+        font-size: calc(28vw / (768 / 100));
       }
     }
 
@@ -70,6 +117,9 @@
         @include pc {
           gap: calc(5vw / (1200 / 100));
         }
+        @include tab {
+          gap: calc(12vw / (768 / 100));
+        }
       }
 
       .girlCard {
@@ -79,6 +129,10 @@
           @include pc {
             font-size: calc(20vw / (1200 / 100));
             padding: calc(22vw / (1200 / 100)) 0 0;
+          }
+          @include tab {
+            font-size: calc(28vw / (768 / 100));
+            padding: calc(55vw / (768 / 100)) 0 0;
           }
         }
       }

@@ -7,6 +7,11 @@
       padding-bottom: calc(100vw / (1200 / 100));
       padding: 0 calc(120vw / (1200 / 100));
     }
+    @include tab {
+      border: none;
+      margin: 0 auto;
+      padding: 0 calc(10vw / (768 / 100));
+    }
   }
   .pagination {
     display: flex;
@@ -14,9 +19,14 @@
     justify-content: center;
     margin: 90px 0 60px;
     color: $pink;
+    font-size: 16px;
     @include pc {
       margin: calc(90vw / (1200 / 100)) 0 calc(60vw / (1200 / 100));
     }
+    @include tab {
+      font-size: calc(28vw / (768 / 100));
+    }
+
     a {
       text-decoration: none;
       color: gray;
@@ -55,10 +65,20 @@
         gap: calc(14vw / (1200 / 100)) calc(10.5vw / (1200 / 100));
         padding: 0;
       }
+      @include tab {
+        justify-content: center;
+        gap: calc(14vw / (768 / 100)) calc(20vw / (768 / 100));
+      }
     }
   }
 }
 .girlCard {
+  @include tab {
+    width: 48%;
+    &-img {
+      width: 100%;
+    }
+  }
   &:last-of-type {
     display: none;
   }
@@ -77,6 +97,9 @@
       @include pc {
         padding-top: calc(50vw / (1200 / 100));
       }
+      @include tab {
+        padding-top: calc(50vw / (768 / 100));
+      }
     }
     img {
       position: relative;
@@ -86,6 +109,10 @@
       @include pc {
         width: calc(216vw / (1200 / 100));
         height: calc(285vw / (1200 / 100));
+      }
+      @include tab {
+        width: 100%;
+        height: 100%;
       }
     }
     .girlCard-info {
@@ -103,21 +130,27 @@
           width: calc(216vw / (1200 / 100));
         }
         @include tab {
-          margin-bottom: calc(12vw / (768 / 100));
+          margin-bottom: 0;
           padding: calc(4vw / (768 / 100)) 0 calc(8vw / (768 / 100));
-          width: calc(310vw / (768 / 100));
+          width: 100%;
         }
         .mark {
           position: absolute;
-          top: -61px;
+          top: -34px;
           right: 10px;
           width: 50px;
           height: 25px;
           @include pc {
-            top: calc(-61vw / (1200 / 100));
+            top: calc(34vw / (1200 / 100));
             right: calc(10vw / (1200 / 100));
             width: calc(50vw / (1200 / 100));
             height: calc(25vw / (1200 / 100));
+          }
+          @include tab {
+            top: calc(-61vw / (768 / 100));
+            right: calc(10vw / (768 / 100));
+            width: calc(75vw / (768 / 100));
+            height: calc(38vw / (768 / 100));
           }
         }
       }
@@ -140,51 +173,8 @@
         }
         @include tab {
           padding: calc(4vw / (768 / 100));
-          width: calc(150vw / (768 / 100));
-          font-size: calc(26vw / (768 / 100));
-        }
-
-        &-time {
-          margin-top: -1px;
-          padding: 8px 0 6px 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 4px;
-          width: 216px;
-          background: #b1b1ef;
-          color: #fff;
-          text-align: center;
-          font-size: 18px;
-          font-style: normal;
-          overflow-x: hidden;
-          font-weight: 600;
-          @include pc {
-            margin-top: calc(-1vw / (1200 / 100));
-            padding: calc(8vw / (1200 / 100)) 0 calc(6vw / (1200 / 100)) 0;
-            gap: calc(4vw / (1200 / 100));
-            width: calc(216vw / (1200 / 100));
-            font-size: calc(18vw / (1200 / 100));
-          }
-          @include tab {
-            margin-top: calc(-1vw / (768 / 100));
-            padding: calc(8vw / (768 / 100)) 0 calc(6vw / (768 / 100)) 0;
-            gap: calc(5vw / (768 / 100));
-            width: calc(310vw / (768 / 100));
-            font-size: calc(22vw / (768 / 100));
-          }
-          img {
-            width: 16px;
-            height: 16px;
-            @include pc {
-              width: calc(16vw / (1200 / 100));
-              height: calc(16vw / (1200 / 100));
-            }
-            @include tab {
-              width: calc(16vw / (768 / 100));
-              height: calc(16vw / (768 / 100));
-            }
-          }
+          width: calc(130vw / (768 / 100));
+          font-size: calc(22vw / (768 / 100));
         }
       }
 
@@ -200,9 +190,9 @@
           font-size: calc(20vw / (1200 / 100));
         }
         @include tab {
-          gap: calc(14vw / (768 / 100));
-          padding-top: calc(14vw / (768 / 100));
-          margin-bottom: calc(16vw / (768 / 100));
+          gap: calc(4vw / (768 / 100));
+          padding-top: calc(8vw / (768 / 100));
+          margin-bottom: calc(6vw / (768 / 100));
           font-size: calc(30vw / (768 / 100));
         }
         p {
@@ -211,7 +201,7 @@
             font-size: calc(20vw / (1200 / 100));
           }
           @include tab {
-            font-size: calc(26vw / (768 / 100));
+            font-size: calc(30vw / (768 / 100));
           }
         }
       }
@@ -219,6 +209,9 @@
         font-size: 15px;
         @include pc {
           font-size: calc(15vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(28vw / (768 / 100));
         }
       }
     }
@@ -230,6 +223,9 @@
       @include pc {
         font-size: calc(20vw / (1200 / 100));
       }
+      @include tab {
+        font-size: calc(30vw / (768 / 100));
+      }
     }
     .girlCard-type {
       display: flex;
@@ -238,6 +234,11 @@
       gap: 6px;
       color: #ffff00;
       font-family: "小塚ゴシック", sans-serif;
+      @include tab {
+        flex-direction: column;
+        width: 100%;
+        font-weight: lighter;
+      }
 
       p {
         padding: 5px 0;
@@ -249,51 +250,10 @@
           width: calc(105vw / (1200 / 100));
           font-size: calc(14vw / (1200 / 100));
         }
-      }
-      .orange {
-        background: #ff6161;
-      }
-      .light-green {
-        background: #95db71;
-      }
-      .light-yellow {
-        background: #ffe088;
-      }
-      .yellow {
-        background: #f9c85a;
-      }
-      .purple {
-        background: #9e61ff;
-      }
-      .light-pink {
-        background: #f6a6ff;
-      }
-      .pink {
-        background: #ff619a;
-      }
-      .green {
-        background: #5ae567;
-      }
-      .light-purple {
-        background: #db85ff;
-        font-size: 20px;
-        @include pc {
-          font-size: calc(20vw / (1200 / 100));
-        }
         @include tab {
-          font-size: calc(20vw / (768 / 100));
-          height: calc(37vw / (768 / 100));
-        }
-      }
-      .blue {
-        background: #888eff;
-        font-size: 20px;
-        @include pc {
-          font-size: calc(20vw / (1200 / 100));
-        }
-        @include tab {
-          font-size: calc(20vw / (768 / 100));
-          height: calc(37vw / (768 / 100));
+          padding: calc(5vw / (768 / 100)) 0;
+          width: 100%;
+          font-size: calc(28vw / (768 / 100));
         }
       }
     }

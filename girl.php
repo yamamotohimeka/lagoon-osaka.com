@@ -1,7 +1,7 @@
 <?php
 $path = './';
 $title = '女の子一覧';
-$templete = 'girls';
+$templete = 'girl';
 include $path . 'components/header.php';
 
 // 女の子データを取得

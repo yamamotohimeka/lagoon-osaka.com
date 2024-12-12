@@ -46,15 +46,37 @@ $(function () {
   //ハンバーガーメニュー
   $(`.header__tabButton`).on("click", (event) => {
     $(".header__tabNav").toggleClass("header__tabNav-active");
-    $(".header__tabButton span").toggleClass("header__tabButton-active");
+    $(".header__tabNav__close").toggleClass("header__tabNav__close-active");
   });
+
+  // メニューリンクのクリックイベント
   $(`.header__tabNav__list-link a`).on("click", (event) => {
-    $(".header__tabNav").toggleClass("header__tabNav-active");
-    $(".header__tabButton span").toggleClass("header__tabButton-active");
+    $(".header__tabNav").removeClass("header__tabNav-active");
+    $(".header__tabNav__close").removeClass("header__tabNav__close-active");
   });
+
+  // ロゴのクリックイベント
   $(`.header-logo a`).on("click", (event) => {
     $(".header__tabNav").removeClass("header__tabNav-active");
-    $(".header__tabButton span").removeClass("header__tabButton-active");
+    $(".header__tabNav__close").removeClass("header__tabNav__close-active");
+  });
+
+  // 閉じるボタンのクリックイベント
+  $(`.header__tabNav__close`).on("click", (event) => {
+    $(".header__tabNav").removeClass("header__tabNav-active");
+    $(".header__tabNav__close").removeClass("header__tabNav__close-active");
+  });
+
+  // フッターのタブボタンのクリックイベントを追加
+  $(`.footer__tabButton`).on("click", (event) => {
+    $(".header__tabNav").toggleClass("header__tabNav-active");
+    $(".header__tabNav__close").toggleClass("header__tabNav__close-active");
+  });
+
+  // メニューリンクのクリックイベント
+  $(`.header__tabNav__list-link a`).on("click", (event) => {
+    $(".header__tabNav").removeClass("header__tabNav-active");
+    $(".header__tabNav__close").removeClass("header__tabNav__close-active");
   });
 
   //一週間の曜日(英・日),日付,今日の日付取得
@@ -118,7 +140,7 @@ $(function () {
 
 // -------------------------------------------------------------ここまで
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper("#topSwiper", {
   centeredSlides: true,
   loop: true,
   speed: 800,
@@ -130,6 +152,21 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+const swiperNewface = new Swiper("#newfaceSwiper", {
+  centeredSlides: true,
+  loop: true,
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 40,
+  autoplay: {
+    delay: 4000,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 

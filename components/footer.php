@@ -21,6 +21,9 @@
             <li>
               <a href="<?php echo $path; ?>newface.php">新人情報</a>
             </li>
+            <li>
+              <a href="<?php echo $path; ?>diary.php">写メ日記</a>
+            </li>
             <li><a href="<?php echo $path; ?>event.php">イベント</a>
             </li>
             <li><a href="<?php echo $path; ?>access.php">アクセス</a></li>
@@ -87,6 +90,19 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="container tab">
+    <div class="footer__tab__nav">
+      <a href="tel:0120-947-854" class="footer__tab__nav__btn">
+        <img src="<?php echo $path; ?>assets/img/tel-btn.png" alt="電話">
+        <span>電話</span>
+      </a>
+      <div class="footer__tab__nav__btn footer__tabButton">
+        <img src="<?php echo $path; ?>assets/img/menu-btn.png" alt="MENU">
+        <span>MENU</span>
+      </div>
+    </div>
   </div>
 </footer>
 

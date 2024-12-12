@@ -7,6 +7,13 @@ h2 {
   padding: 6px 0 6px 30px;
   position: relative;
   overflow: hidden;
+  @include tab {
+    padding: calc(16vw / (768 / 100)) 0 calc(16vw / (768 / 100))
+      calc(30vw / (768 / 100));
+    background: none;
+    background-color: #ff33a3;
+    font-size: calc(26vw / (768 / 100));
+  }
 
   &:before {
     content: "";
@@ -135,6 +142,9 @@ main {
   .footer-space {
     height: calc(200vw / (768 / 100));
   }
+  @include tab {
+    padding-top: 0;
+  }
 }
 
 .none {
@@ -181,6 +191,10 @@ main {
     max-width: calc(1200vw / (1200 / 100));
     padding: 0 calc(20vw / (1200 / 100));
   }
+  @include tab {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 main {
   .container {
@@ -189,7 +203,7 @@ main {
       max-width: calc(1200vw / (1200 / 100));
     }
     @include tab {
-      max-width: calc(738vw / (768 / 100));
+      max-width: 100%;
     }
   }
 }

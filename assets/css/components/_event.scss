@@ -1,6 +1,9 @@
 .event {
   &-wrap {
     border: 1px solid $pink;
+    @include tab {
+      border: none;
+    }
   }
   &__text-flex {
     display: inline-flex;
@@ -14,11 +17,17 @@
       @include pc {
         font-size: calc(34vw / (1200 / 100));
       }
+      @include tab {
+        font-size: calc(30vw / (768 / 100));
+      }
     }
     p {
       font-size: 24px;
       @include pc {
         font-size: calc(24vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(21vw / (768 / 100));
       }
     }
     span {
@@ -26,6 +35,9 @@
       font-weight: bold;
       @include pc {
         font-size: calc(34vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(30vw / (768 / 100));
       }
     }
   }

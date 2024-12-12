@@ -13,6 +13,11 @@
       padding: calc(50vw / (1200 / 100)) 0 calc(120vw / (1200 / 100)) 0;
       gap: calc(60vw / (1200 / 100)) calc(50vw / (1200 / 100));
     }
+    @include tab {
+      border: none;
+      padding: calc(50vw / (768 / 100)) calc(60vw / (768 / 100))
+        calc(120vw / (768 / 100));
+    }
 
     &-text {
       text-align: center;
@@ -24,6 +29,9 @@
         @include pc {
           font-size: calc(20vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(28vw / (768 / 100));
+        }
       }
       p {
         font-size: 18px;
@@ -31,17 +39,26 @@
         @include pc {
           font-size: calc(18vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(28vw / (768 / 100));
+        }
       }
       &-tel {
         font-size: 22px;
         @include pc {
           font-size: calc(22vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(73vw / (768 / 100));
+        }
         font-family: serif;
         span {
           font-size: 35px;
           @include pc {
             font-size: calc(35vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(43vw / (768 / 100));
           }
         }
       }
@@ -57,12 +74,18 @@
         @include pc {
           font-size: calc(20vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(30vw / (768 / 100));
+        }
       }
       p {
         font-size: 14px;
         line-height: 1.5;
         @include pc {
           font-size: calc(14vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(28vw / (768 / 100));
         }
       }
       .map-img {

@@ -1,19 +1,24 @@
 <?php
-
 require(dirname(__FILE__) . "/../hooks/girl.php");
 
 // girls.php から呼び出された場合、ページネーションされたデータを使用
-if (isset($templete) && $templete === 'girls' && isset($girlsForCurrentPage)) {
+if (isset($templete) && $templete === 'girl' && isset($girlsForCurrentPage)) {
     $currentGirls = $girlsForCurrentPage;
 } else {
-    $currentGirls = $girls; // 通常はすべてのデータを使用
+    $currentGirls = $girls; //通常はすべてのデータを使用
+}
+
+// $templeteが'top'の場合に表示するデータ数を制限
+if ($templete === 'top') {
+  $displayCount = 16; // 
+  $currentGirls = array_slice($currentGirls, 0, $displayCount); // 画面幅に応じた数を表示
 }
 
 foreach ($currentGirls as $girl): ?>
 
 <li class="
     girlCard fadeIn1
-    <?php if ($templete !== 'girls') { echo 'none'; } ?>
+    <?php if ($templete !== 'girl') { echo 'none';} ?>
     <?php if ($girl['sun']) echo 'Sun'; ?>
     <?php if ($girl['mon']) echo 'Mon'; ?>
     <?php if ($girl['tue']) echo 'Tue'; ?>
@@ -25,7 +30,7 @@ foreach ($currentGirls as $girl): ?>
 
   <div class="girlCard-frame">
     <div class="girlCard-frame-flex">
-      <?php if ($templete !== 'girls') : ?>
+      <?php if ($templete !== 'girl') : ?>
       <p class="girlCard-time">
         <?php echo $girl['time']; ?>
       </p>
@@ -34,9 +39,7 @@ foreach ($currentGirls as $girl): ?>
       <div class="girlCard-img">
         <img src="./assets/img/<?php echo $girl['img']; ?>.png" alt="ラグーンの女の子の画像">
       </div>
-      <?php if ($templete !== 'girl') : ?>
-      <p class="girlCard-info-store-time"> <img src="./assets/img/clock.png" alt=""><?php echo $girl['time']; ?></p>
-      <?php endif; ?>
+
       <div class="girlCard-info-box">
         <?php if ($girl['newface']): ?>
         <img class="mark" src="./assets/img/newface.png" alt="新人マーク">
@@ -53,6 +56,9 @@ foreach ($currentGirls as $girl): ?>
       <div class="girlCard-type">
         <p><?php echo $girl['tag1']; ?></p>
         <p><?php echo $girl['tag2']; ?></p>
+      </div>
+      <div class="newfaceCard-fee tab">
+        <p>指名料 <?php echo $girl['reserve'];?>円</p>
       </div>
     </div>
   </div>

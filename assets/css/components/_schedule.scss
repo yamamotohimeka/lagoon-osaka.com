@@ -6,11 +6,20 @@
       padding: calc(50vw / (1200 / 100)) calc(120vw / (1200 / 100))
         calc(100vw / (1200 / 100));
     }
+    @include tab {
+      padding: calc(50vw / (768 / 100)) calc(30vw / (768 / 100))
+        calc(100vw / (768 / 100));
+      border: none;
+    }
     .cast__box__list {
       justify-content: flex-start;
       padding: 0 30px;
       @include pc {
         padding: 0;
+      }
+      @include tab {
+        margin: 0 auto;
+        justify-content: center;
       }
     }
   }
@@ -21,9 +30,9 @@
       font-size: calc(18vw / (1200 / 100));
     }
     @include tab {
-      margin: calc(30vw / (768 / 100)) auto calc(30vw / (768 / 100));
-      padding: calc(36vw / (768 / 100)) calc(00vw / (768 / 100));
-      width: 96%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
       &::-webkit-scrollbar {
         margin-top: calc(10vw / (768 / 100));
         @include tab {
@@ -49,6 +58,7 @@
       color: #fff;
       .dateactive {
         background: #ff006f;
+        position: relative;
         &:after {
           content: "";
           display: block;
@@ -58,6 +68,10 @@
           border-right: 10px solid transparent;
           position: absolute;
           bottom: -10px;
+          @include tab {
+            bottom: calc(-10vw / (768 / 100));
+            left: calc(35vw / (768 / 100));
+          }
         }
       }
 
@@ -76,6 +90,11 @@
           width: calc(126vw / (1200 / 100));
           padding: calc(15vw / (1200 / 100));
         }
+        @include tab {
+          display: block;
+          font-size: calc(27vw / (768 / 100));
+          width: calc(95vw / (768 / 100));
+        }
 
         &_date {
           display: flex;
@@ -85,6 +104,9 @@
           margin-right: 6px;
           @include pc {
             margin-right: calc(6vw / (1200 / 100));
+          }
+          @include tab {
+            margin-right: 0;
           }
         }
       }

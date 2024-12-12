@@ -17,12 +17,12 @@
   <title><?php echo $title; ?> | La Goon ～出会って5秒で恋する予感～の公式WEBサイト</title>
 
   <!-- SEO設定 -->
-  <meta name="description" content="La Goonの公式WEBサイト" />
+  <meta name="description" content="大阪・素人専門ホテルヘルス&デリバリーヘルス　ラ・グーン" />
   <link rel="canonical" href="/recruit/" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="La Goon" />
-  <meta property="og:description" content="La Goonの公式WEBサイト" />
+  <meta property="og:description" content="大阪・素人専門ホテルヘルス&デリバリーヘルス　ラ・グーン" />
   <meta property="og:url" content="/" />
   <meta property="og:site_name" content="La Goon" />
   <meta property="og:image" content="<?php echo $path; ?>assets/img/OGP.png" />
@@ -37,11 +37,13 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__top">
-        <h1>大阪・素人専門ホテルヘルス&デリバリーヘルス　ラ・グーン</h1>
-        <div class="header__login">
-          <span class="login"><img src="<?php echo $path; ?>assets/img/login-btn.png" alt=""></span>
-          <span class="login"><img src="<?php echo $path; ?>assets/img/signin-btn.png" alt=""></span>
+      <div class="pc">
+        <div class="header__top">
+          <h1>大阪・素人専門ホテルヘルス&デリバリーヘルス　ラ・グーン</h1>
+          <div class="header__login">
+            <span class="login"><img src="<?php echo $path; ?>assets/img/login-btn.png" alt=""></span>
+            <span class="login"><img src="<?php echo $path; ?>assets/img/signin-btn.png" alt=""></span>
+          </div>
         </div>
       </div>
       <div class="header__info">
@@ -79,6 +81,11 @@
               <p>新人情報<span>new face</span></p>
             </a>
           </li>
+          <li class="header__nav__list-link <?php if ($templete === 'diary') echo 'active'; ?>">
+            <a href="<?php echo $path; ?>diary.php">
+              <p>写メ日記<span>photo BBS</span></p>
+            </a>
+          </li>
           <li class="header__nav__list-link <?php if ($templete === 'event') echo 'active'; ?>">
             <a href="<?php echo $path; ?>event.php">
               <p>イベント<span>event</span></p>
@@ -97,58 +104,72 @@
         </ul>
       </div>
     </nav>
-    </div>
 
 
 
     <div class="header__main-tab tab"></div>
-    <div class="header__tabButton-bg tab">
-      <div class="header__tabButton">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="header__tabButton-nav-wrap tab">
+      <div class="header__tabButton-nav ">
+        <div class="header__tabButton-login login">
+          <img src="<?php echo $path; ?>assets/img/tab-signin.png" alt="新規登録">
+          <span>新規登録</span>
+        </div>
+        <div class="header__tabButton-login login">
+          <img src="<?php echo $path; ?>assets/img/tab-login.png" alt="会員ログイン">
+          <span>会員ログイン</span>
+        </div>
+        <div class="header__tabButton">
+          <img src="<?php echo $path; ?>assets/img/tab-menu.png" alt="メニュー">
+          <span>メニュー</span>
+        </div>
       </div>
-    </div>
-    <nav class="header__tabNav tab">
-      <div class="container">
-        <ul class="header__tabNav__list">
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>" class="header__link">
-              TOP
-            </a>
-          </li>
-          <li class=" header__tabNav__list-link">
-            <a href="<?php echo $path; ?>girl.php" class="header__link">
-              女の子一覧
-            </a>
-          </li>
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>schedule.php" class="header__link">
-              出勤情報
-            </a>
-          </li>
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>newface.php" class="header__link">
-              <p>新人情報</p>
-            </a>
-          </li>
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>event.php" class="header__link">
-              イベント</a>
-          </li>
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>access.php" class="header__link">
-              <p>アクセス</p>
-            </a>
-          </li>
-          <li class="header__tabNav__list-link">
-            <a href="<?php echo $path; ?>system.php" class="header__link">
-              システム
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <nav class="header__tabNav tab">
+        <div class="container">
+          <div class="header__tabNav__close">
+            <span></span>
+          </div>
+          <ul class="header__tabNav__list">
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>" class="header__link">
+                TOP
+              </a>
+            </li>
+            <li class=" header__tabNav__list-link">
+              <a href="<?php echo $path; ?>girl.php" class="header__link">
+                女の子一覧
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>schedule.php" class="header__link">
+                出勤情報
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>newface.php" class="header__link">
+                <p>新人情報</p>
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>diary.php" class="header__link">
+                写メ日記</a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>event.php" class="header__link">
+                イベント</a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>access.php" class="header__link">
+                <p>アクセス</p>
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>system.php" class="header__link">
+                システム
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
   </header>
 
   <div class="login-modal" id="login-modal">

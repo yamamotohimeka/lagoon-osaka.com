@@ -10,6 +10,9 @@
     @include pc {
       font-size: calc(13vw / (1200 / 100));
     }
+    @include tab {
+      font-size: calc(28vw / (768 / 100));
+    }
   }
   &-name {
     color: $pink;
@@ -17,11 +20,18 @@
     @include pc {
       font-size: calc(17vw / (1200 / 100));
     }
+    @include tab {
+      font-size: calc(30vw / (768 / 100));
+    }
   }
   &-text {
     font-size: 14px;
     @include pc {
       font-size: calc(14vw / (1200 / 100));
+    }
+    @include tab {
+      font-size: calc(28vw / (768 / 100));
+      line-height: 1.5;
     }
   }
   &-img {
@@ -29,6 +39,74 @@
       width: 100%;
       @include pc {
         width: calc(392vw / (1200 / 100));
+      }
+      @include tab {
+        width: 70%;
+      }
+    }
+  }
+  &wrap {
+    .diary {
+      &__list {
+        border: 1px solid $pink;
+        padding: 0 20px 100px;
+        @include tab {
+          border: none;
+          padding: 0 20px 100px;
+        }
+        .cast__box__list {
+          display: flex;
+          justify-content: flex-start;
+
+          .diary {
+            width: 32.5%;
+            @include tab {
+              width: 100%;
+            }
+          }
+        }
+        .pagination {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 90px 0 60px;
+          color: $pink;
+          font-size: 16px;
+          @include pc {
+            margin: calc(90vw / (1200 / 100)) 0 calc(60vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(28vw / (768 / 100));
+            gap: calc(10vw / (768 / 100));
+          }
+          @include sp {
+            font-size: calc(24vw / (440 / 100));
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            margin: 0 5px;
+            @include pc {
+              margin: 0 calc(5vw / (1200 / 100));
+            }
+            &.active {
+              color: $pink;
+              font-weight: bold;
+              text-decoration: underline;
+            }
+          }
+          .inactive {
+            color: gray;
+          }
+          span {
+            margin: 0 10px;
+            font-weight: bold;
+            @include pc {
+              margin: 0 calc(10vw / (1200 / 100));
+            }
+          }
+        }
       }
     }
   }

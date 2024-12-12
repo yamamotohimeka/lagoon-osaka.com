@@ -1,11 +1,18 @@
 .system {
   &__wrap {
     border: 1px solid $pink;
+    @include tab {
+      border: none;
+      padding: 0 calc(50vw / (768 / 100));
+    }
     table {
       margin: 0 auto;
       width: 632px;
       @include pc {
         width: calc(632vw / (1200 / 100));
+      }
+      @include tab {
+        width: 100%;
       }
       tbody {
         display: flex;
@@ -15,6 +22,9 @@
           justify-content: space-between;
           @include pc {
             gap: calc(10vw / (1200 / 100));
+          }
+          @include tab {
+            gap: calc(20vw / (768 / 100));
           }
         }
       }
@@ -26,13 +36,22 @@
       @include pc {
         padding: calc(80vw / (1200 / 100)) 0 calc(50vw / (1200 / 100));
       }
+      @include tab {
+        padding: calc(100vw / (768 / 100)) 0 calc(80vw / (768 / 100));
+      }
       table {
         font-size: 32px;
         @include pc {
           font-size: calc(32vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(37vw / (768 / 100));
+        }
         tbody {
           gap: 30px;
+          @include tab {
+            gap: calc(40vw / (768 / 100));
+          }
           tr {
             padding: 0 20px 10px;
             border-bottom: 1px dotted #fff;
@@ -57,11 +76,17 @@
         @include pc {
           font-size: calc(62vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(62vw / (768 / 100));
+        }
         tbody {
           gap: 20px;
           tr {
             span {
-              font-size: calc(50vw / (1200 / 100));
+              font-size: 50px;
+              @include tab {
+                font-size: calc(49vw / (768 / 100));
+              }
             }
           }
         }
@@ -69,20 +94,50 @@
     }
     &-option {
       padding: 50px 0;
+      @include tab {
+        padding-top: calc(40vw / (768 / 100));
+        margin-top: calc(100vw / (768 / 100));
+        border-top: 1px dotted #fff;
+        text-align: center;
+      }
+      &-title {
+        padding: calc(40vw / (768 / 100)) 0;
+        h3 {
+          font-size: calc(40vw / (768 / 100));
+          padding: calc(20vw / (768 / 100));
+          display: inline-block;
+          border: 1px solid #fff;
+        }
+      }
       table {
         border: 1px dotted #fff;
         font-size: 22px;
         @include pc {
           font-size: calc(22vw / (1200 / 100));
         }
+        @include tab {
+          font-size: calc(40vw / (768 / 100));
+          border: none;
+          border-bottom: 1px dotted #fff;
+        }
+
         tbody {
           align-content: center;
           flex-wrap: wrap;
           padding: 20px;
           height: 250px;
           gap: 20px 20px;
+          @include tab {
+            flex-direction: column;
+            height: 100%;
+            gap: calc(40vw / (768 / 100));
+            padding: calc(20vw / (768 / 100)) 0 calc(100vw / (768 / 100));
+          }
           tr {
             width: 45%;
+            @include tab {
+              width: 100%;
+            }
             span {
               font-size: 16px;
             }
@@ -95,10 +150,17 @@
         align-items: center;
         gap: 10px;
         padding: 30px 0;
+        @include tab {
+          padding: calc(50vw / (768 / 100)) 0;
+          font-size: calc(28vw / (768 / 100));
+        }
         img {
           width: 264px;
           @include pc {
             width: calc(264vw / (1200 / 100));
+          }
+          @include tab {
+            width: calc(373vw / (768 / 100));
           }
         }
       }
@@ -114,16 +176,25 @@
     @include pc {
       font-size: calc(15vw / (1200 / 100));
     }
+    @include tab {
+      font-size: calc(28vw / (768 / 100));
+    }
     h3 {
       margin-bottom: 10px;
       @include pc {
         margin-bottom: calc(10vw / (1200 / 100));
+      }
+      @include tab {
+        margin-bottom: calc(50vw / (768 / 100));
       }
     }
     ul {
       padding: 0 20px 0 20px;
       @include pc {
         padding: 0 calc(20vw / (1200 / 100)) 0 calc(20vw / (1200 / 100));
+      }
+      @include tab {
+        padding: 0 calc(28vw / (768 / 100)) 0 calc(28vw / (768 / 100));
       }
       li {
         list-style-type: disc;

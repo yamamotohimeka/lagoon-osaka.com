@@ -5,12 +5,21 @@
     @include pc {
       gap: calc(20vw / (1200 / 100));
     }
+    @include tab {
+      flex-direction: column;
+    }
 
     .top {
       &__event {
         width: 774px;
         @include pc {
           width: calc(774vw / (1200 / 100));
+        }
+        @include tab {
+          width: 100%;
+          .section-title {
+            display: none;
+          }
         }
 
         .top-swipper {
@@ -21,12 +30,19 @@
           @include pc {
             padding-bottom: calc(50vw / (1200 / 100));
           }
+          @include tab {
+            padding-bottom: calc(50vw / (768 / 100));
+          }
+          @include sp {
+            padding-bottom: calc(40vw / (440 / 100));
+          }
         }
 
         .swiper {
           width: 100%;
           height: auto;
           position: relative;
+          z-index: 0;
 
           &-wrapper {
             display: flex;
@@ -51,6 +67,14 @@
               gap: calc(10vw / (1200 / 100));
               padding: calc(10vw / (1200 / 100)) 0;
             }
+            @include tab {
+              gap: calc(10vw / (768 / 100));
+              padding: calc(10vw / (768 / 100)) 0;
+            }
+            @include sp {
+              gap: calc(10vw / (440 / 100));
+              padding: calc(0vw / (440 / 100)) 0;
+            }
 
             &-bullet {
               width: 19px;
@@ -63,6 +87,11 @@
                 height: calc(19vw / (1200 / 100));
                 width: calc(19vw / (1200 / 100));
                 margin: 0 calc(5vw / (1200 / 100));
+              }
+              @include tab {
+                height: calc(19vw / (768 / 100));
+                width: calc(19vw / (768 / 100));
+                margin: 0 calc(5vw / (768 / 100));
               }
 
               &-active {
@@ -82,7 +111,9 @@
         @include pc {
           width: calc(392vw / (1200 / 100));
         }
-
+        @include tab {
+          width: 100%;
+        }
         &-text {
           font-family: "小塚ゴシック Pr6N", sans-serif;
           display: flex;
@@ -98,11 +129,19 @@
             padding: calc(20vw / (1200 / 100));
             font-size: calc(19vw / (1200 / 100));
           }
+          @include tab {
+            border: none;
+            line-height: 1.5;
+            font-size: calc(19vw / (768 / 100));
+          }
           span {
             color: #ff2cff;
             font-size: 23px;
             @include pc {
               font-size: calc(23vw / (1200 / 100));
+            }
+            @include tab {
+              font-size: calc(23vw / (768 / 100));
             }
           }
           img {
@@ -110,11 +149,47 @@
             @include pc {
               width: calc(324vw / (1200 / 100));
             }
+            @include tab {
+              width: 80%;
+            }
           }
           p:nth-of-type(3) {
-            font-size: 14px; // 3番目のpテキストのフォントサイズを指定
+            font-size: 14px;
+            @include pc {
+              font-size: calc(14vw / (1200 / 100));
+            }
+            @include tab {
+              font-size: calc(18vw / (768 / 100));
+            }
           }
         }
+      }
+    }
+  }
+  &__newface {
+    .swiper {
+      z-index: 0;
+      &-button-next::after {
+        content: "▶"; /* ボタンの矢印変更 */
+        color: $pink;
+
+        font-size: calc(40vw / (768 / 100));
+        font-family: "小塚ゴシック Pr6N", sans-serif;
+        @include sp {
+          font-size: calc(35vw / (440 / 100));
+        }
+      }
+      &-button-prev::after {
+        content: "◀"; /* ボタンの矢印変更 */
+        color: $pink;
+        font-size: calc(40vw / (768 / 100));
+        font-family: "小塚ゴシック Pr6N", sans-serif;
+        @include sp {
+          font-size: calc(35vw / (440 / 100));
+        }
+      }
+      .newfaceCard .girlCard-frame {
+        border: none;
       }
     }
   }
@@ -126,21 +201,36 @@
     @include pc {
       gap: calc(20vw / (1200 / 100));
     }
+    @include tab {
+      flex-direction: column;
+    }
 
     .top {
       &__cast__box__list {
         border: 1px solid $pink;
-        padding: 0 30px;
+
         height: 1550px;
         overflow: auto;
         @include pc {
           height: calc(1550vw / (1200 / 100));
           padding: 0 calc(30vw / (1200 / 100));
         }
+        @include tab {
+          border: none;
+          overflow: hidden;
+          height: 100%;
+        }
         .link-girl {
           text-align: right;
           p {
-            padding: 15px;
+            padding-right: 14px;
+            padding-top: 55px;
+            padding-bottom: 20px;
+            @include tab {
+              padding: calc(20vw / (768 / 100));
+              padding-bottom: calc(50vw / (768 / 100));
+              font-size: calc(24vw / (768 / 100));
+            }
           }
         }
       }
@@ -148,6 +238,13 @@
         width: 774px;
         @include pc {
           width: calc(774vw / (1200 / 100));
+        }
+        @include tab {
+          width: 100%;
+          .cast__box__list {
+            justify-content: flex-start;
+            gap: calc(20vw / (768 / 100)) calc(28vw / (768 / 100));
+          }
         }
 
         .section-title {
@@ -170,6 +267,21 @@
         @include pc {
           width: calc(392vw / (1200 / 100));
         }
+        @include tab {
+          width: 100%;
+        }
+
+        &-link {
+          text-align: right;
+          p {
+            padding: 20px;
+            @include tab {
+              padding: calc(20vw / (768 / 100));
+              padding-bottom: calc(100vw / (768 / 100));
+              font-size: calc(24vw / (768 / 100));
+            }
+          }
+        }
 
         &-list {
           border: 1px solid $pink;
@@ -179,6 +291,11 @@
           @include pc {
             padding: 0 calc(30vw / (1200 / 100));
             height: calc(1550vw / (1200 / 100));
+          }
+          @include tab {
+            border: none;
+            width: 100%;
+            height: auto;
           }
         }
       }

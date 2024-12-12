@@ -15,6 +15,9 @@
       @include pc {
         font-size: calc(14vw / (1200 / 100));
       }
+      @include tab {
+        display: none;
+      }
     }
   }
   &__info {
@@ -25,11 +28,19 @@
       padding: calc(38vw / (1200 / 100)) calc(16vw / (1200 / 100))
         calc(27vw / (1200 / 100));
     }
+    @include tab {
+      justify-content: center;
+      padding: calc(38vw / (768 / 100)) calc(16vw / (768 / 100))
+        calc(27vw / (768 / 100));
+    }
     &-logo {
       img {
         width: 518px;
         @include pc {
           width: calc(518vw / (1200 / 100));
+        }
+        @include tab {
+          width: calc(718vw / (768 / 100));
         }
       }
     }
@@ -41,6 +52,9 @@
       @include pc {
         font-size: calc(22vw / (1200 / 100));
         gap: calc(10vw / (1200 / 100));
+      }
+      @include tab {
+        display: none;
       }
       a {
         span {
@@ -121,14 +135,38 @@
     z-index: 90;
     overflow: hidden;
 
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      height: calc(24vw / (768 / 100));
-      margin-top: calc(-22vw / (768 / 100));
-      vertical-align: middle;
+    &__close {
+      position: absolute;
+      top: calc(50vw / (768 / 100));
+      right: calc(50vw / (768 / 100));
+      z-index: 999;
+      span {
+        position: absolute;
+        top: 0;
+        right: calc(7vw / (768 / 100));
+        width: calc(80vw / (768 / 100));
+        height: calc(10vw / (768 / 100));
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: calc(70vw / (768 / 100));
+          height: calc(8vw / (768 / 100));
+          background-color: #fff;
+          border-radius: 4px;
+          transform: translate(-50%, -50%);
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
     }
+
     &__list {
       position: absolute;
       display: flex;
@@ -156,88 +194,50 @@
   }
 
   &__tabButton {
-    position: relative;
-    margin: 0 auto;
-    color: $pink;
-    width: calc(110vw / (768 / 100));
-    height: calc(130vw / (768 / 100));
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 
     span {
-      position: absolute;
-      left: -0px;
-      width: 100%;
-      height: calc(8vw / (768 / 100));
-      background: $pink;
-      border-radius: 10px;
-      transition: 0.3s all ease-in-out;
-    }
-    span:nth-of-type(1) {
-      top: calc(24vw / (768 / 100));
+      font-size: calc(23vw / (768 / 100));
     }
 
-    span:nth-of-type(2) {
-      top: calc(50vw / (768 / 100));
-      font-size: calc(18vw / (768 / 100));
-    }
+    &-nav {
+      display: flex;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: calc(70vw / (768 / 100)) 0;
+        width: 100%;
+        height: calc(100vw / (768 / 100));
+        gap: calc(15vw / (768 / 100));
 
-    span:nth-of-type(3) {
-      top: calc(76vw / (768 / 100));
-
-      color: $pink;
-      background-color: $pink;
-    }
-    span:nth-of-type(3)::after {
-      content: "Menu";
-      position: absolute;
-      display: block;
-      top: calc(8vw / (440 / 100));
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      color: $pink;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-      font-size: calc(28vw / (768 / 100));
-      text-transform: uppercase;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-    }
-    &-active:nth-of-type(1) {
-      width: 90% !important;
-      top: calc(42vw / (768 / 100)) !important;
-      left: calc(7vw / (768 / 100));
-      transform: rotate(45deg);
-      @include sp {
-        top: calc(20vw / (440 / 100)) !important;
+        &:first-child {
+          img {
+            width: calc(51vw / (768 / 100));
+          }
+          background-color: #141414;
+        }
+        &:nth-child(2) {
+          img {
+            width: calc(61vw / (768 / 100));
+          }
+          background-color: #323232;
+        }
+        &:nth-child(3) {
+          img {
+            width: calc(73vw / (768 / 100));
+          }
+          background-color: #505050;
+        }
+        span {
+          font-size: calc(26vw / (768 / 100));
+        }
       }
-    }
-    &-active:nth-of-type(2) {
-      width: 90% !important;
-      top: calc(42vw / (768 / 100)) !important;
-      left: calc(7vw / (768 / 100));
-      transform: rotate(-45deg);
-      @include sp {
-        top: calc(20vw / (440 / 100)) !important;
-      }
-    }
-    &-active:nth-of-type(3) {
-      background-color: transparent !important;
-    }
-    &-active:nth-of-type(3)::after {
-      content: "Close" !important;
-    }
-    &-bg {
-      display: block;
-      width: calc(140vw / (768 / 100));
-      height: calc(130vw / (768 / 100));
-      right: calc(30vw / (768 / 100));
-      top: calc(44vw / (768 / 100));
-      border-radius: 14px;
-      z-index: 99;
-      overflow: hidden;
     }
   }
 }
@@ -266,9 +266,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(71, 71, 71, 0.8);
   display: none;
   z-index: 9999;
+  @include tab {
+    width: 100%;
+    height: 100%;
+  }
   &__content {
     position: fixed;
     top: 50%;
@@ -284,12 +288,27 @@
     width: 800px;
     height: 600px;
     background-color: #000;
+    @include tab {
+      width: 80%;
+      height: 80%;
+    }
+    @include sp {
+      width: 90%;
+      height: 50%;
+    }
     h3 {
       padding-left: 55px;
       position: relative;
       color: $pink;
       font-size: 28px;
       letter-spacing: 0.1em;
+      @include tab {
+        font-size: calc(28vw / (768 / 100));
+        padding-left: calc(55vw / (768 / 100));
+      }
+      @include sp {
+        font-size: calc(28vw / (440 / 100));
+      }
       &::before {
         content: "";
         display: inline-block;
@@ -301,6 +320,15 @@
         position: absolute;
         top: -15px;
         left: 0;
+        @include tab {
+          top: calc(-15vw / (768 / 100));
+          width: calc(45vw / (768 / 100));
+          height: calc(48vw / (768 / 100));
+          background-size: calc(45vw / (768 / 100)) calc(48vw / (768 / 100));
+        }
+        @include sp {
+          top: calc(0vw / (440 / 100));
+        }
       }
     }
 
@@ -309,10 +337,20 @@
       flex-direction: column;
       gap: 10px;
       width: 250px;
+      @include tab {
+        width: calc(250vw / (768 / 100));
+        gap: calc(10vw / (768 / 100));
+      }
+      @include sp {
+        width: 80%;
+      }
       input {
         width: 100%;
         padding: 10px;
         border: 1px solid #fff;
+        @include tab {
+          padding: calc(10vw / (768 / 100));
+        }
       }
     }
     &__link {
@@ -324,6 +362,12 @@
         text-align: center;
         font-size: 14px;
         border-bottom: 1px solid #fff;
+        @include tab {
+          font-size: calc(14vw / (768 / 100));
+        }
+        @include sp {
+          font-size: calc(14vw / (440 / 100));
+        }
       }
     }
   }

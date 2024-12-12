@@ -11,7 +11,7 @@ include $path . 'components/header.php';
     </div>
     <div class="event-wrap">
       <div class="event__pink">
-        <img class="fadeIn1" src="<?php echo $path; ?>assets/img/slide1.png" alt="">
+        <img class="fadeIn1" src="<?php echo $path; ?>assets/img/slide2.png" alt="">
         <div class="event__text-flex fadeIn1">
           <h3>大還元祭開催中!</h3>
           <span>全コース最大4000円OFF</span>
@@ -19,7 +19,7 @@ include $path . 'components/header.php';
         </div>
       </div>
       <div class="event__green">
-        <img class="fadeIn1" src="<?php echo $path; ?>assets/img/slide2.png" alt="">
+        <img class="fadeIn1" src="<?php echo $path; ?>assets/img/slide1.png" alt="">
         <div class="event__text-flex fadeIn1">
           <h3>新人割</h3>
           <span>全コース2000円OFF</span>

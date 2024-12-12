@@ -55,6 +55,9 @@ include $path . 'components/header.php';
         </table>
       </div>
       <div class="system__price-option">
+        <div class="system__price-option-title tab">
+          <h3>オプション料金</h3>
+        </div>
         <table>
           <tbody>
             <tr>
