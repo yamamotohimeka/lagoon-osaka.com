@@ -82,7 +82,7 @@
           </li>
           <li class="border"></li>
           <li class="footer__nav__list-link">
-            <a target="_blank" href="../recruit" class="footer__link">
+            <a href="<?php echo $path; ?>recruit" class="footer__link" target="_blank">
               <p>求人サイト</p>
             </a>
           </li>

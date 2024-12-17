@@ -1,0 +1,75 @@
+.workSwiper {
+  @include tab {
+    width: 100%;
+  }
+  &-img {
+    text-align: center;
+    img {
+      @include tab {
+        width: 55%;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    width: 55%;
+    height: calc(288vw / (768 / 100));
+    margin: 0 auto;
+    padding: calc(8vw / (768 / 100));
+    color: #7d6e6e;
+    background: #fff;
+    &-title,
+    &-text {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        @include pc {
+          width: calc(30vw / (1200 / 100));
+          height: calc(30vw / (1200 / 100));
+        }
+      }
+    }
+    &-title {
+      position: relative;
+      padding: calc(24vw / (768 / 100)) 0 calc(10vw / (768 / 100));
+      font-size: calc(46vw / (768 / 100));
+      text-align: center;
+      &::before {
+        border-top: solid 2px #7d6e6e;
+        border-left: solid 2px #7d6e6e;
+        top: 0;
+        left: 0;
+      }
+      &::after {
+        border-top: solid 2px #7d6e6e;
+        border-right: solid 2px #7d6e6e;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-text {
+      padding: 0 5%;
+      font-size: calc(23vw / (768 / 100));
+      line-height: 1.25;
+      &::before {
+        border-bottom: solid 2px #7d6e6e;
+        border-left: solid 2px #7d6e6e;
+        bottom: calc(8vw / (768 / 100));
+        left: calc(8vw / (768 / 100));
+      }
+      &::after {
+        border-bottom: solid 2px #7d6e6e;
+        border-right: solid 2px #7d6e6e;
+        bottom: calc(8vw / (768 / 100));
+        right: calc(8vw / (768 / 100));
+      }
+    }
+  }
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #7d6e6e;
+}

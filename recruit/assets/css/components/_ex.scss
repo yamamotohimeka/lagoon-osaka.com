@@ -1,0 +1,163 @@
+.ex {
+  &__bg {
+    height: 952px;
+
+    background: url(../images/ex-bg.png) no-repeat;
+    background-size: 100% 952px;
+    background-position: center;
+
+    position: relative;
+    z-index: 0;
+    &-2 {
+      background-color: $blue;
+      width: 100%;
+      padding: 30px 0 57px;
+    }
+  }
+  &__img {
+    img {
+      position: absolute;
+      &:first-child {
+        top: 80px;
+        left: 670px;
+      }
+      &:last-child {
+        top: 198px;
+        left: 847px;
+      }
+    }
+  }
+
+  &__text1 {
+    position: absolute;
+    bottom: 84px;
+    left: 727px;
+    p {
+      color: $blue;
+      line-height: 1;
+      &:first-child {
+        padding-left: 46px;
+        font-size: 69px;
+        font-weight: lighter;
+        span {
+          font-size: 95px;
+          font-weight: bold;
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+      &:nth-child(2) {
+        display: inline-block;
+        font-size: 37px;
+        clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
+        background-color: $blue;
+        color: #fff;
+        padding: 7px 87px;
+      }
+      &:nth-child(3) {
+        font-weight: lighter;
+        font-size: 85px;
+        span {
+          font-size: 117px;
+          font-weight: bold;
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+      &:nth-child(4) {
+        font-size: 36px;
+        padding-left: 25px;
+      }
+    }
+  }
+
+  &__text2 {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 68px;
+    right: 685px;
+    color: $blue;
+    font-size: 46px;
+    color: #fff;
+    p {
+      writing-mode: vertical-rl;
+      letter-spacing: 0.005em;
+      background-color: $blue;
+      line-height: 1.2;
+      clip-path: polygon(80% 0%, 100% 3%, 100% 97%, 0 100%, 0 3%);
+      padding: 30px 0;
+      &:last-child {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__faq {
+    h2 {
+      color: $yellow;
+      font-size: 51px;
+      font-weight: bold;
+    }
+    &-inner {
+      padding-top: 70px;
+      &:first-of-type {
+        padding-top: 37px;
+      }
+      &:last-child {
+        line-height: 1.5;
+        font-size: 23px;
+        font-family: initial;
+        font-weight: lighter;
+      }
+      &-q {
+        padding-bottom: 20px;
+        padding-left: 86px;
+        position: relative;
+        font-size: 32px;
+        color: $yellow;
+        border-bottom: 2px dotted #fff;
+        &::before {
+          content: "Q";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 22px;
+          width: 40px;
+          height: 40px;
+          font-size: 32px;
+          color: $blue;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+      &-a {
+        margin-top: 12px;
+        padding-left: 86px;
+        position: relative;
+        color: #fff;
+        font-size: 23px;
+        line-height: 1.4;
+        &::before {
+          content: "A";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 22px;
+          width: 40px;
+          height: 40px;
+          font-size: 32px;
+          color: #fff;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #478ca8;
+        }
+      }
+    }
+  }
+}

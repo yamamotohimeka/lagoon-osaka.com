@@ -4,10 +4,10 @@ session_start();
 // 日記データの読み込み（例：$diarys 配列があると仮定）
 require(dirname(__FILE__) . '/../hooks/diary.php'); // $diarysを読み込む
 
-// 現在の時間を取得（例：20241212 14時）
+// 現在の時間を取得
 $currentHour = date('YmdH'); // 例: 20241212 14
 
-// キャッシュキーを設定（例：2024年12月12日14時）
+// キャッシュキーを設定（例：diary_order）
 $cacheKey = 'diary_order';
 
 // キャッシュを取得
@@ -20,11 +20,14 @@ function set_cache($key, $value) {
     $_SESSION[$key] = $value; // セッションにキャッシュを保存
 }
 
-// キャッシュされた順番がない場合にランダム化してキャッシュに保存
-if (!get_cache($cacheKey)) {
+// キャッシュの有効期限を設定（例: 3時間ごとにキャッシュを更新）
+$cacheTimeKey = $cacheKey . '_time';
+$cacheTime = isset($_SESSION[$cacheTimeKey]) ? $_SESSION[$cacheTimeKey] : 0;
+
+if (time() - $cacheTime > 10800) { // 3時間経過した場合
     shuffle($diarys); // 日記の順番をランダム化
-    set_cache($cacheKey, $diarys); // キャッシュに保存
-    
+    set_cache($cacheKey, $diarys); // 新しい順番をキャッシュに保存
+    $_SESSION[$cacheTimeKey] = time(); // キャッシュタイムを更新
 }
 
 // キャッシュから順番を取得
@@ -36,13 +39,13 @@ if (!isset($_SESSION['diarys_dates'])) {
     $dates = [];
 
     // 各投稿の日時を生成
-    foreach ($diarys as $index => $diary) {
+    foreach ($diarysToDisplay as $index => $diary) {
         // 最初の投稿は現在時刻、以降はランダムな間隔で減少
         if ($index === 0) {
             $dateTimestamp = $baseTime;
         } else {
             // 30分～2時間（1800秒～7200秒）のランダム間隔
-            $timeOffset = rand(3800, 18200);
+            $timeOffset = rand(1800, 7200);
             $dateTimestamp -= $timeOffset;
         }
 
@@ -85,8 +88,11 @@ $paginatedDates = array_slice($dates, $startIndex, $itemsPerPage);
   <div class="diary-text">
     <p><?php echo nl2br($diary['diary-text']); ?></p>
   </div>
-
-
-
 </li>
 <?php endforeach; ?>
+
+<?php 
+//テスト用
+// session_unset();  // セッションのクリア
+// session_destroy();  // セッションの破棄
+?>
