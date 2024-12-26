@@ -16,8 +16,7 @@
         </div>
 
         <div class="ex__text2">
-          <p>即日体験入店</p>
-          <p>ご応募から即体験</p>
+          <img src="<?php echo $path; ?>assets/images/ex-text.png" alt="即日体験入店ご応募から即体験">
         </div>
       </div>
     </div>

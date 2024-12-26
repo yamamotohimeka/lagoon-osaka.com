@@ -2,8 +2,7 @@
   <div class="treat__bg mincho">
     <div class="container">
       <div class="treat__text1">
-        <p>アリバイ対策万全</p>
-        <p>身バレの心配一切なし</p>
+        <img src="<?php echo $path; ?>assets/images/treat-text.png" alt="アリバイ対策万全身バレの心配一切なし">
       </div>
       <div class="treat__text2 ">
         <p>安心して働いていただけることを</p>

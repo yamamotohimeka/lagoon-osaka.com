@@ -2,8 +2,7 @@
   <div class="work__bg">
     <div class="container">
       <div class="work__text1 mincho">
-        <p>移籍大歓迎</p>
-        <p>高級店より無理せず回転率を</p>
+        <img src="<?php echo $path; ?>assets/images/work-text.png" alt="移籍大歓迎高級店より無理せず回転率を">
       </div>
       <div class="work__wrap">
         <div class="work__text2 mincho pc">

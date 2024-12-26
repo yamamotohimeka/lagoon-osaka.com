@@ -5,8 +5,7 @@
         <img src="<?php echo $path; ?>assets/images/about-pr1.png" alt="出稼ぎ保証">
       </div>
       <div class="about__text1 mincho">
-        <p>出稼ぎ大歓迎</p>
-        <p>充実プランをご用意</p>
+        <img src="<?php echo $path; ?>assets/images/about-text.png" alt="出稼ぎ大歓迎充実プランをご用意">
       </div>
     </div>
   </div>

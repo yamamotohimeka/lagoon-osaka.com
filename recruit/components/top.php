@@ -15,8 +15,7 @@
       </div>
 
       <div class="top__text2">
-        <p>プレイ中にキスは</p>
-        <p>一切ありません</p>
+        <img src="<?php echo $path; ?>assets/images/top-text.png" alt="プレイ中にキスは一切ありません">
       </div>
 
       <div class="top__img">

@@ -40,34 +40,13 @@
       font-size: calc(48vw / (768 / 100));
     }
     color: #fff;
-    p {
-      writing-mode: vertical-rl;
-      letter-spacing: 0.005em;
-      background-color: $purple;
-      line-height: 1.2;
-      clip-path: polygon(80% 0%, 100% 3%, 100% 97%, 0 100%, 0 3%);
-      padding: 30px 0;
-      font-style: italic;
-      padding-right: 10px;
-      @include pc {
-        padding-right: calc(10vw / (1200 / 100));
-      }
-      &:last-child {
-        margin-top: 70px;
-        @include pc {
-          margin-top: calc(70vw / (1200 / 100));
-        }
-        @include tab {
-          margin-top: calc(70vw / (768 / 100));
-          padding-right: calc(10vw / (768 / 100));
-        }
-      }
-      @include pc {
-        padding: calc(30vw / (1200 / 100)) 0;
+    img {
+      width: 100%;
+      @include sp {
+        width: calc(114vw / (440 / 100));
       }
       @include tab {
-        padding: calc(30vw / (768 / 100)) 0;
-        padding-right: calc(10vw / (768 / 100));
+        width: calc(80vw / (440 / 100));
       }
     }
   }
