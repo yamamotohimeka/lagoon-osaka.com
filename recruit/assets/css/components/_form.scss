@@ -2,13 +2,23 @@
   color: #787878;
   font-size: 22px;
   padding: 140px 0 95px 131px;
+  @include pc {
+    padding: calc(140vw / (1200 / 100)) 0 calc(95vw / (1200 / 100))
+      calc(131vw / (1200 / 100));
+    font-size: calc(22vw / (1200 / 100));
+  }
+  @include tab {
+    padding: calc(80vw / (768 / 100)) 3%;
+    font-size: calc(32vw / (768 / 100));
+    width: 100%;
+  }
 
   .error {
     display: block;
     position: absolute;
     top: 120%;
-    left: 30%;
-    width: 100%;
+    left: 38%;
+    width: 60%;
     color: red;
     box-sizing: border-box;
     @include tab {
@@ -27,6 +37,14 @@
       padding: 8px;
       color: #fff;
       font-size: 20px;
+      @include pc {
+        font-size: calc(20vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(25vw / (768 / 100));
+        left: calc(320vw / (768 / 100));
+        right: unset;
+      }
     }
   }
 
@@ -36,9 +54,20 @@
     justify-content: flex-start;
     align-items: center;
     margin: 40px 0;
+    @include pc {
+      margin: calc(40vw / (1200 / 100)) 0;
+    }
+    @include tab {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: calc(40vw / (768 / 100)) 0;
+    }
 
     &-input {
       width: 62%;
+      @include tab {
+        width: 100%;
+      }
     }
     label {
       width: 38%;
@@ -46,6 +75,12 @@
       text-align: left;
       letter-spacing: 0.2rem;
       color: #fff;
+      @include pc {
+        padding: calc(8vw / (1200 / 100)) 0;
+      }
+      @include tab {
+        width: 100%;
+      }
 
       &-text {
         width: 100px;
@@ -58,6 +93,12 @@
       width: 50%;
       padding: 8px 12px;
       background-color: #fff;
+      @include pc {
+        padding: calc(8vw / (1200 / 100)) calc(12vw / (1200 / 100));
+      }
+      @include tab {
+        width: 100%;
+      }
     }
     &-select {
       select {
@@ -65,6 +106,9 @@
         padding: 8px 12px;
         background-color: #fff;
         color: #787878;
+        @include tab {
+          width: 100%;
+        }
       }
     }
   }
@@ -74,6 +118,13 @@
     background-color: #fff;
     padding: 8px 12px;
     resize: none;
+    @include pc {
+      height: calc(373vw / (1200 / 100));
+    }
+    @include tab {
+      width: 100%;
+      height: calc(540vw / (768 / 100));
+    }
   }
 
   &-textarea {
@@ -88,7 +139,7 @@
       margin-top: calc(76vw / (1200 / 100));
     }
     @include tab {
-      margin-top: calc(60vw / (768 / 100));
+      margin-top: calc(30vw / (768 / 100));
     }
     &::after {
       content: "";
@@ -126,7 +177,9 @@
         font-size: calc(30vw / (1200 / 100));
       }
       @include tab {
-        font-size: calc(30vw / (768 / 100));
+        font-size: calc(32vw / (768 / 100));
+        width: 100%;
+        padding: calc(20vw / (768 / 100)) 0;
       }
       @include sp {
         width: 100%;
@@ -140,7 +193,7 @@
     margin: 0 auto;
 
     .form-confirm {
-      color: #ba9868;
+      color: #000;
       padding-bottom: 40px;
       text-align: center;
       line-height: 1.5;
@@ -150,7 +203,7 @@
       }
     }
     .form-box-input {
-      color: #ba9868;
+      color: $gray;
     }
   }
 }

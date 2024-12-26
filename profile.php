@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
-  <link rel="icon" href="<?php echo $path; ?>assets/img/favicon.ico" />
+  <link rel="icon" href="<?php echo $path; ?>assets/img/favicon.png" />
   <title><?php echo $title; ?> | 私立なでシコ女学院の公式WEBサイト</title>
 
   <!-- SEO設定 -->

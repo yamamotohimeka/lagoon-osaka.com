@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer__bg">
-    <div class="container">
-      <div class="footer__flex ">
+    <div class="container pc">
+      <div class="footer__flex">
         <div class="footer__flex__left">
           <img src="<?php echo $path; ?>assets/images/logo.png" alt=" La Goonのロゴ">
         </div>
@@ -42,11 +42,33 @@
         </nav>
       </div>
     </div>
+
+    <div class="tab">
+      <div class="footer__tabButton-wrapper ">
+        <button class="footer__tabButton__link">
+          <a href="tel:0120-000-000">
+            <img src="<?php echo $path; ?>assets/images/footer-tel.png" alt=" La Goonのロゴ">
+          </a>
+        </button>
+        <button class="footer__tabButton__link">
+          <a href="https://line.me/ti/p/tWe4OQhxvt#~" target="_blank">
+            <img src="<?php echo $path; ?>assets/images/footer-line.png" alt=" La Goonのロゴ">
+          </a>
+        </button>
+        <button class="footer__tabButton__link footer__tabButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+
+    </div>
   </div>
 
-  <div class="footer__bottom">
+  <div class="footer__bottom pc">
     <div class="container">
-      <a href="<?php echo $path; ?>" target="_blank">
+      <a href="../" target="_blank">
         <button class="footer__bottom__btn">
           営業サイトはコチラから
         </button>

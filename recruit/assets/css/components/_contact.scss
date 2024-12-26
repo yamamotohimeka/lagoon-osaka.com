@@ -2,13 +2,26 @@
   &__bg {
     background: url(../images/contact_bg.png) no-repeat;
     background-position: center center;
-    background-size: 100% 953px;
+    position: relative;
+    background-size: cover;
+
     height: 953px;
     z-index: 1;
-    position: relative;
+    .container {
+      position: relative;
+    }
+    @include pc {
+      height: calc(953vw / (1200 / 100));
+    }
+    @include tab {
+      height: calc(773vw / (768 / 100));
+    }
     &2 {
       width: 100%;
       background-color: $gray;
+      @include tab {
+        margin-bottom: calc(140vw / (768 / 100));
+      }
     }
   }
   &__box {
@@ -18,7 +31,25 @@
     gap: 74px;
     position: absolute;
     top: 154px;
-    left: 688px;
+    left: 16px;
+
+    &-tabwrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(28vw / (768 / 100));
+    }
+
+    @include pc {
+      top: calc(154vw / (1200 / 100));
+      left: calc(16vw / (1200 / 100));
+      gap: calc(74vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(50vw / (768 / 100));
+      left: unset;
+      gap: calc(50vw / (768 / 100));
+    }
 
     h2 {
       padding: 18px 60px;
@@ -26,6 +57,14 @@
       text-align: center;
       color: #fff;
       background-color: $gray;
+      @include pc {
+        padding: calc(18vw / (1200 / 100)) calc(60vw / (1200 / 100));
+        font-size: calc(40vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(30vw / (768 / 100));
+        padding: calc(10vw / (768 / 100)) calc(30vw / (768 / 100));
+      }
     }
 
     &-item {
@@ -40,27 +79,86 @@
       color: #418b99;
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      @include pc {
+        width: calc(436vw / (1200 / 100));
+        font-size: calc(31vw / (1200 / 100));
+        padding: calc(13vw / (1200 / 100)) 0;
+      }
+      @include tab {
+        width: calc(420vw / (768 / 100));
+        padding: calc(24vw / (768 / 100)) 0;
+        gap: calc(12vw / (768 / 100));
+        border-radius: calc(10vw / (768 / 100));
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: calc(34vw / (768 / 100));
+      }
 
       img {
         width: 165px;
+        @include pc {
+          width: calc(165vw / (1200 / 100));
+        }
+        @include tab {
+          width: calc(120vw / (768 / 100));
+        }
       }
       a {
         font-size: 55px;
+        @include pc {
+          font-size: calc(55vw / (1200 / 100));
+        }
+        @include tab {
+          text-decoration: underline;
+          font-size: calc(38vw / (768 / 100));
+        }
       }
       p {
+        @include tab {
+          &.line-text {
+            width: 100%;
+            text-align: center;
+            padding-top: calc(40vw / (768 / 100));
+          }
+        }
         &.tel-text {
           padding-top: 10px;
           padding-bottom: 31px;
+          @include pc {
+            padding-top: calc(10vw / (1200 / 100));
+            padding-bottom: calc(31vw / (1200 / 100));
+          }
+          @include tab {
+            padding-top: calc(24vw / (768 / 100));
+            font-size: calc(34vw / (768 / 100));
+            padding-bottom: calc(24vw / (768 / 100));
+          }
         }
         &.form-text {
           padding-top: 31px;
           padding-bottom: 10px;
+          @include pc {
+            padding-top: calc(31vw / (1200 / 100));
+            padding-bottom: calc(10vw / (1200 / 100));
+          }
         }
         &:nth-child(2) {
           font-size: 21px;
+          @include pc {
+            font-size: calc(21vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(22vw / (768 / 100));
+          }
         }
         &:nth-child(3) {
           font-size: 19px;
+          @include pc {
+            font-size: calc(19vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(38vw / (768 / 100));
+          }
         }
       }
     }

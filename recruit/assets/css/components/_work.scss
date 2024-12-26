@@ -1,14 +1,29 @@
 .work {
   &__bg {
     background: url(../images/work-bg.png) no-repeat;
-    background-size: 100% 950px;
+    background-size: cover;
     background-position: center;
     height: 950px;
-    position: relative;
     z-index: 1;
+
+    @include pc {
+      height: calc(950vw / (1200 / 100));
+    }
+    @include tab {
+      height: calc(1290vw / (768 / 100));
+      background-position: 30% 50%;
+    }
+    .container {
+      position: relative;
+    }
     &2 {
       background-color: $pink2;
       text-align: left;
+      @include tab {
+        height: calc(556vw / (768 / 100));
+        position: relative;
+        background-color: unset;
+      }
     }
   }
   &__text1 {
@@ -18,10 +33,23 @@
     gap: 10px;
     position: absolute;
     top: 68px;
-    right: 685px;
+    right: 10px;
     color: $blue;
     font-size: 46px;
     color: #fff;
+    @include pc {
+      top: calc(68vw / (1200 / 100));
+      right: calc(10vw / (1200 / 100));
+      font-size: calc(46vw / (1200 / 100));
+      gap: calc(10vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(68vw / (768 / 100));
+      right: unset;
+      left: calc(17vw / (768 / 100));
+      font-size: calc(46vw / (768 / 100));
+      gap: calc(10vw / (768 / 100));
+    }
     p {
       writing-mode: vertical-rl;
       letter-spacing: 0.005em;
@@ -29,6 +57,12 @@
       line-height: 1.2;
       clip-path: polygon(80% 0%, 100% 3%, 100% 97%, 0 100%, 0 3%);
       padding: 30px 0;
+      font-style: italic;
+      padding-right: 10px;
+      @include pc {
+        padding-right: calc(10vw / (1200 / 100));
+      }
+
       &:first-child {
         margin-top: 60px;
       }
@@ -41,8 +75,20 @@
     gap: 29px;
     position: absolute;
     top: 106px;
-    right: 857px;
+    left: 355px;
     color: $pink2;
+    @include pc {
+      top: calc(106vw / (1200 / 100));
+      left: calc(355vw / (1200 / 100));
+      gap: calc(29vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(90vw / (768 / 100));
+      align-items: flex-end;
+      left: unset;
+      right: calc(20vw / (768 / 100));
+      gap: calc(42vw / (768 / 100));
+    }
   }
   &__text2 {
     display: flex;
@@ -51,12 +97,31 @@
     font-size: 33px;
     line-height: 1.4;
     letter-spacing: -0.06rem;
+    @include pc {
+      font-size: calc(33vw / (1200 / 100));
+      gap: calc(10vw / (1200 / 100));
+    }
+    @include tab {
+      color: $pink2;
+      text-align: right;
+      position: absolute;
+      top: calc(890vw / (768 / 100));
+      left: calc(15vw / (768 / 100));
+      font-size: calc(38vw / (768 / 100));
+      line-height: 1.5;
+    }
   }
   &__price {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+    @include pc {
+      gap: calc(10vw / (1200 / 100));
+    }
+    @include tab {
+      gap: calc(10vw / (768 / 100));
+    }
     &-item {
       display: flex;
       align-items: center;
@@ -67,11 +132,34 @@
       border-radius: 10px;
       width: 660px;
       letter-spacing: -0.18rem;
+      @include pc {
+        width: calc(660vw / (1200 / 100));
+        gap: calc(29vw / (1200 / 100));
+      }
+      @include tab {
+        width: calc(324vw / (768 / 100));
+        flex-direction: column;
+        gap: calc(5vw / (768 / 100));
+        padding: calc(10vw / (768 / 100)) calc(15vw / (768 / 100));
+        letter-spacing: -0.21rem;
+      }
       p {
         color: #fff;
         font-size: 38px;
+        @include pc {
+          font-size: calc(38vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(48vw / (768 / 100));
+        }
         span {
           font-size: 30px;
+          @include pc {
+            font-size: calc(30vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(34vw / (768 / 100));
+          }
         }
         &:last-child {
           background-color: #fff;
@@ -80,6 +168,18 @@
           border-radius: 10px;
           width: 350px;
           letter-spacing: -0.02rem;
+          @include pc {
+            width: calc(350vw / (1200 / 100));
+          }
+          @include tab {
+            width: calc(312vw / (768 / 100));
+            padding: calc(2vw / (768 / 100));
+            font-size: calc(30vw / (768 / 100));
+            text-align: center;
+            span {
+              font-size: calc(30vw / (768 / 100));
+            }
+          }
         }
       }
     }
@@ -89,10 +189,26 @@
     flex-direction: column;
     gap: 12px;
     padding-left: 122px;
+    @include pc {
+      gap: calc(12vw / (1200 / 100));
+      padding-left: calc(122vw / (1200 / 100));
+    }
+    @include tab {
+      padding-left: unset;
+      gap: calc(7vw / (768 / 100));
+    }
     p {
       font-size: 44px;
       font-weight: 700;
       display: inline-block;
+      @include pc {
+        font-size: calc(44vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(35vw / (768 / 100));
+        text-align: center;
+        letter-spacing: -0.16rem;
+      }
     }
     ul {
       display: flex;
@@ -100,7 +216,14 @@
       justify-content: space-between;
       gap: 15px;
       width: 436px;
-
+      @include pc {
+        width: calc(436vw / (1200 / 100));
+        gap: calc(15vw / (1200 / 100));
+      }
+      @include tab {
+        width: calc(550vw / (768 / 100));
+        gap: calc(10vw / (768 / 100));
+      }
       li {
         padding: 8px 0;
         width: 209px;
@@ -112,6 +235,14 @@
         line-height: 1.4;
         letter-spacing: -0.06rem;
         position: relative;
+        @include pc {
+          width: calc(209vw / (1200 / 100));
+          font-size: calc(24vw / (1200 / 100));
+        }
+        @include tab {
+          width: calc(270vw / (768 / 100));
+          font-size: calc(24vw / (768 / 100));
+        }
         &:after {
           position: absolute;
           border: 1px solid #fff;
@@ -126,11 +257,28 @@
   }
   &__note {
     position: absolute;
-    bottom: 29px;
-    left: 942px;
+    bottom: -109px;
+    left: -100px;
     font-size: 19px;
     color: #000;
     font-weight: bold;
+    width: 904px;
+    @include pc {
+      width: calc(904vw / (1200 / 100));
+      bottom: calc(-50vw / (1200 / 100));
+      left: calc(-100vw / (1200 / 100));
+      font-size: calc(19vw / (1200 / 100));
+    }
+    @include tab {
+      bottom: unset;
+      top: calc(1040vw / (768 / 100));
+      left: calc(49vw / (768 / 100));
+      font-size: calc(28vw / (768 / 100));
+      font-weight: normal;
+      text-indent: -1em;
+      letter-spacing: -0.16rem;
+      width: calc(710vw / (768 / 100));
+    }
   }
 
   &__text3 {
@@ -144,17 +292,50 @@
       color: #fff;
       font-weight: bold;
       letter-spacing: -0.06em;
+      @include pc {
+        padding: calc(109vw / (1200 / 100)) 0 calc(77vw / (1200 / 100))
+          calc(94vw / (1200 / 100));
+        font-size: calc(46vw / (1200 / 100));
+      }
+      @include tab {
+        color: $pink2;
+        position: absolute;
+        top: calc(314vw / (768 / 100));
+        left: calc(-15vw / (768 / 100));
+        font-size: calc(48vw / (768 / 100));
+        padding: calc(65vw / (768 / 100)) 0 calc(10vw / (768 / 100))
+          calc(10vw / (768 / 100));
+        width: 104%;
+        background-color: #fff;
+        z-index: 1;
+      }
       p {
         text-align: center;
         &:first-child {
           font-size: 41px;
           position: relative;
+          @include pc {
+            font-size: calc(41vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(55vw / (768 / 100));
+          }
           &::before {
             content: "●";
             position: absolute;
             top: -17px;
             left: 209px;
             font-size: 11px;
+            @include pc {
+              top: calc(-17vw / (1200 / 100));
+              left: calc(209vw / (1200 / 100));
+              font-size: calc(11vw / (1200 / 100));
+            }
+            @include tab {
+              top: calc(-28vw / (768 / 100));
+              left: calc(369vw / (768 / 100));
+              font-size: calc(18vw / (768 / 100));
+            }
           }
           &::after {
             content: "●";
@@ -162,10 +343,26 @@
             top: -17px;
             left: 251px;
             font-size: 11px;
+            @include pc {
+              top: calc(-17vw / (1200 / 100));
+              left: calc(251vw / (1200 / 100));
+              font-size: calc(11vw / (1200 / 100));
+            }
+            @include tab {
+              top: calc(-28vw / (768 / 100));
+              left: calc(422vw / (768 / 100));
+              font-size: calc(18vw / (768 / 100));
+            }
           }
         }
         &:last-child {
           font-size: 62px;
+          @include pc {
+            font-size: calc(62vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(92vw / (768 / 100));
+          }
         }
       }
 
@@ -177,13 +374,32 @@
         font-weight: bold;
         letter-spacing: -2.5rem;
         z-index: 0;
-        font-family: "小塚ゴシック Pr6N";
+        font-family: "小塚ゴシック Pr6N", "游ゴシック体", "YuGothic",
+          "游ゴシック", "Yu Gothic", sans-serif;
+
+        @include pc {
+          font-size: calc(425vw / (1200 / 100));
+          top: calc(-92vw / (1200 / 100));
+          right: calc(17vw / (1200 / 100));
+        }
+        @include tab {
+          position: unset;
+          width: 100%;
+          background: unset;
+          img {
+            width: 100%;
+          }
+        }
 
         span {
           font-size: 98px;
           writing-mode: vertical-lr;
           letter-spacing: 0;
           padding-left: 24px;
+          @include pc {
+            font-size: calc(98vw / (1200 / 100));
+            padding-left: calc(24vw / (1200 / 100));
+          }
         }
       }
     }

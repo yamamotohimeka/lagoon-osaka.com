@@ -19,11 +19,11 @@ include $path . 'components/header.php';
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="<?php echo $path; ?>event.php">
-                  <img src="<?php echo $path; ?>assets/img/slide1.png" alt=""></a>
+                  <img src="<?php echo $path; ?>assets/img/slide1.png" alt="新人割"></a>
               </div>
               <div class="swiper-slide">
                 <a href="<?php echo $path; ?>event.php">
-                  <img src="<?php echo $path; ?>assets/img/slide2.png" alt=""></a>
+                  <img src="<?php echo $path; ?>assets/img/slide2.png" alt="大還元祭"></a>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ include $path . 'components/header.php';
             必ず合言葉をお伝えください。<br><br>
           </p>
 
-          <a href="<?php echo $path; ?>event.php"><img src="<?php echo $path; ?>assets/img/slide2.png" alt=""></a>
+          <a href="<?php echo $path; ?>event.php"><img src="<?php echo $path; ?>assets/img/slide2.png" alt="大還元祭"></a>
         </div>
       </section>
     </div>

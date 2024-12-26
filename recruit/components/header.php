@@ -51,7 +51,7 @@ function token_chk($token)
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="icon" href="<?php echo $path; ?>assets/images/favicon.ico" />
+  <link rel="icon" href="<?php echo $path; ?>assets/images/favicon.png" />
 
   <title><?php echo $title; ?>La Goon 求人</title>
 
@@ -73,12 +73,14 @@ function token_chk($token)
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__info">
-        <p>24時間365日女性スタッフが対応</p>
-        <div class="header__info__tel">
-          <a href="tel:0120-947-854">
-            0120-947-854
-          </a>
+      <div class="pc">
+        <div class="header__info ">
+          <p>24時間365日女性スタッフが対応</p>
+          <div class="header__info__tel">
+            <a href="tel:0120-947-854">
+              0120-947-854
+            </a>
+          </div>
         </div>
       </div>
       <div class="header__flex">
@@ -127,8 +129,10 @@ function token_chk($token)
 
       <div class="header__tabButton tab">
         <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <nav class="header__tabNav tab">
+      <nav class="header__tabNav tab mincho">
         <ul class="header__tabNav__list">
           <li class="header__tabNav__list-link">
             <a href="#">

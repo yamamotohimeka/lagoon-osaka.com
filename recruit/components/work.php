@@ -1,12 +1,12 @@
 <section id="work" class="work scroll-point">
   <div class="work__bg">
     <div class="container">
-      <div class="work__text1">
+      <div class="work__text1 mincho">
         <p>移籍大歓迎</p>
         <p>高級店より無理せず回転率を</p>
       </div>
       <div class="work__wrap">
-        <div class="work__text2 mincho">
+        <div class="work__text2 mincho pc">
           <p>普通の女性の方が確実に稼げるのが当店です<br>
             給与面も他店に比べても割高です</p>
         </div>
@@ -39,8 +39,13 @@
             <li>残業手当</li>
           </ul>
         </div>
+        <p class="work__note pc">※日給保証は全員同じ金額になりますのでご安心くださいませ。出勤する時間数によって変動致します。</p>
       </div>
-      <p class="work__note">※日給保証は全員同じ金額になりますのでご安心くださいませ。出勤する時間数によって変動致します。</p>
+      <div class="work__text2 mincho tab">
+        <p>普通の女性の方が確実に稼げるのが当店です<br>
+          給与面も他店に比べても割高です</p>
+      </div>
+      <p class="work__note tab">※日給保証は全員同じ金額になりますのでご安心くださいませ。<br>出勤する時間数によって変動致します。</p>
     </div>
   </div>
   <div class="work__bg2">
@@ -50,8 +55,14 @@
           <p>入店したら全員もらえる</p>
           <p>入店祝い金</p>
         </div>
-        <p class="work__text3-item__price">15<span>万円</span></p>
+        <div class="work__text3-item__price pc">
+          <p>15<span>万円</span></p>
+        </div>
+
       </div>
+    </div>
+    <div class="work__text3-item__price tab">
+      <img src="<?php echo $path; ?>assets/images/work-price.png" alt="15万円">
     </div>
   </div>
 </section>

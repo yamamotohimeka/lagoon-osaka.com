@@ -82,7 +82,7 @@
           </li>
           <li class="border"></li>
           <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>recruit" class="footer__link" target="_blank">
+            <a href="../recruit" class="footer__link" target="_blank">
               <p>求人サイト</p>
             </a>
           </li>
@@ -92,7 +92,14 @@
 
   </div>
 
+
+  <div class="footer__recruit">
+    <a target="_blank" href="../recruit" class="footer__link">
+      <p>求人サイト</p>
+    </a>
+  </div>
   <div class="container tab">
+
     <div class="footer__tab__nav">
       <a href="tel:0120-947-854" class="footer__tab__nav__btn">
         <img src="<?php echo $path; ?>assets/img/tel-btn.png" alt="電話">

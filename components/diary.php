@@ -82,7 +82,7 @@ $paginatedDates = array_slice($dates, $startIndex, $itemsPerPage);
     <p class="diary-date"><?php echo htmlspecialchars($paginatedDates[$index]); ?></p> <!-- 日時の表示 -->
   </div>
   <div class="diary-img <?php echo ($diary['diary-img'] === 'secret') ? 'login' : ''; ?>">
-    <img src="./assets/img/<?php echo htmlspecialchars($diary['diary-img']); ?>.png" alt="画像">
+    <img src="./assets/img/<?php echo htmlspecialchars($diary['diary-img']); ?>.png" alt="写メ日記">
   </div>
 
   <div class="diary-text">

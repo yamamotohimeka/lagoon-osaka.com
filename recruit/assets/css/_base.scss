@@ -28,12 +28,6 @@ body {
   font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
-.recruit {
-  @include tab {
-    padding-top: calc(200vw / (768 / 100));
-  }
-}
-
 img {
   max-width: 100%;
 }
@@ -64,6 +58,9 @@ img {
   width: 100%;
   max-width: 1200px;
   @include center;
+  @include pc {
+    padding: 0 2%;
+  }
 }
 
 .flex {
@@ -207,8 +204,13 @@ img {
   }
 }
 
-@keyframes shine {
+@keyframes textFade {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
   100% {
-    left: 125%;
+    visibility: visible;
+    opacity: 1;
   }
 }

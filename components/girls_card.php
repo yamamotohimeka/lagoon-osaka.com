@@ -8,11 +8,21 @@ if (isset($templete) && $templete === 'girl' && isset($girlsForCurrentPage)) {
     $currentGirls = $girls; //通常はすべてのデータを使用
 }
 
+// 今日の曜日を取得
+$today = strtolower(date('D')); // sun, mon, tue, wed, thu, fri, sat
+
 // $templeteが'top'の場合に表示するデータ数を制限
 if ($templete === 'top') {
-  $displayCount = 16; // 
-  $currentGirls = array_slice($currentGirls, 0, $displayCount); // 画面幅に応じた数を表示
+    // 今日の曜日に一致するデータをフィルタリング
+    $currentGirls = array_filter($currentGirls, function($girl) use ($today) {
+        return isset($girl[$today]) && $girl[$today] === true;
+    });
+
+    // 表示するデータ数を制限
+    $displayCount = 9; // 上限を9個に設定
+    $currentGirls = array_slice($currentGirls, 0, $displayCount); // 画面幅に応じた数を表示
 }
+
 
 foreach ($currentGirls as $girl): ?>
 
@@ -36,7 +46,7 @@ foreach ($currentGirls as $girl): ?>
       </p>
       <?php endif; ?>
 
-      <div class="girlCard-img">
+      <div class="girlCard-img login">
         <img src="./assets/img/<?php echo $girl['img']; ?>.png" alt="ラグーンの女の子の画像">
       </div>
 

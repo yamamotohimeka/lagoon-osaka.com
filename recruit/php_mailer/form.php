@@ -92,4 +92,4 @@ $_SESSION['key'] = $token;
 <div id="result"></div><!-- /#result -->
 
 <script type="module" src="php_mailer/js/form.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6Lcb4K0iAAAAAF7-sJ3X0ClxBGchSvSr8gAY2Y3V"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcgBDkkAAAAAKHj4aObrK7ovarE4jLvtsb_EGLS"></script>

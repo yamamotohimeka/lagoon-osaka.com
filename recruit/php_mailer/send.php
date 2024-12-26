@@ -1,5 +1,5 @@
 <?php
-$store = 'バリスパ求人';//ここにサイト名
+$store = 'ラグーン求人';//ここにサイト名
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

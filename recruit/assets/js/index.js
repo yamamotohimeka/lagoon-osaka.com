@@ -36,18 +36,27 @@ $(function () {
     },
   });
 
+  //Q&A
+  $(".ex__faq-inner-q").on("click", (event) => {
+    $(event.currentTarget).next(".ex__faq-inner-a").toggleClass("a-open");
+    $(event.currentTarget).toggleClass("q-open");
+  });
+
   //ハンバーガーメニュー
   $(`.header__tabButton`).on("click", (event) => {
     $(".header__tabNav").toggleClass("header__tabNav-active");
     $(".header__tabButton span").toggleClass("header__tabButton-active");
+    $(".footer__tabButton span").toggleClass("footer__tabButton-active");
   });
   $(`.header__tabNav__list-link a`).on("click", (event) => {
     $(".header__tabNav").toggleClass("header__tabNav-active");
     $(".header__tabButton span").toggleClass("header__tabButton-active");
+    $(".footer__tabButton span").toggleClass("footer__tabButton-active");
   });
   $(`.header-logo a`).on("click", (event) => {
     $(".header__tabNav").removeClass("header__tabNav-active");
     $(".header__tabButton span").removeClass("header__tabButton-active");
+    $(".footer__tabButton span").removeClass("footer__tabButton-active");
   });
 
   //TOPへ戻るボタン
@@ -127,5 +136,13 @@ $(function () {
 
   $(window).resize(function () {
     PositionCheck();
+  });
+
+  //ハンバーガーメニュー
+  $(`.footer__tabButton`).on("click", (event) => {
+    $(".header__tabNav").toggleClass("header__tabNav-active");
+    $(".header__tabButton span").toggleClass("header__tabButton-active");
+    $(".footer__tabNav").toggleClass("footer__tabNav-active");
+    $(".footer__tabButton span").toggleClass("footer__tabButton-active");
   });
 });

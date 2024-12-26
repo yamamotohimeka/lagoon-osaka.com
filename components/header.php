@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
-  <link rel="icon" href="<?php echo $path; ?>assets/img/favicon.ico" />
+  <link rel="icon" href="<?php echo $path; ?>assets/img/favicon.png" />
   <title><?php echo $title; ?> | La Goon ～出会って5秒で恋する予感～の公式WEBサイト</title>
 
   <!-- SEO設定 -->
@@ -165,6 +165,11 @@
             <li class="header__tabNav__list-link">
               <a href="<?php echo $path; ?>system.php" class="header__link">
                 システム
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>recruit.php" class="header__link">
+                求人
               </a>
             </li>
           </ul>

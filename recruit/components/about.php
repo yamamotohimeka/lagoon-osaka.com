@@ -2,9 +2,9 @@
   <div class="about__bg">
     <div class="container">
       <div class="about__img">
-        <img src="<?php echo $path; ?>assets/images/about-pr1.png" alt=" La Goonのロゴ">
+        <img src="<?php echo $path; ?>assets/images/about-pr1.png" alt="出稼ぎ保証">
       </div>
-      <div class="about__text1">
+      <div class="about__text1 mincho">
         <p>出稼ぎ大歓迎</p>
         <p>充実プランをご用意</p>
       </div>
@@ -13,10 +13,15 @@
   <div class="about__bg-2">
     <div class="container">
       <div class="about__desc">
-        <p class="about__desc-text mincho">
+        <p class="about__desc-text mincho pc">
           交通費は3日で片道支給 7日で往復支給<br>
           地域によっては3日でも全額支給！
         </p>
+        <p class="about__desc-text mincho tab">
+          交通費は3日で片道支給<br>
+          7日で往復支給
+        </p>
+
         <div class="about__desc-wifi">
           <img src="<?php echo $path; ?>assets/images/about-wifi.png" alt="wifi">
           <div class="about__desc-wifi-text">
@@ -24,7 +29,7 @@
             <p>全部屋Wi-Fi完備・ベット・TV・冷蔵庫<br>
               洗濯機・電子レンジ完備</p>
             <p>勤務地から5分以内の場所に完備しておりますので<br>
-              お店の近くが嫌な方は難波・日本橋・谷町9丁目・京橋<br>
+              お店の近くが嫌な方は難波・日本橋・谷町9丁目・京橋<br class="pc">
               梅田お好きなエリアをご希望ください。</p>
           </div>
         </div>
@@ -32,9 +37,9 @@
           <div class="about__desc-point-box">
             <div class="about__desc-point-box-title">◆完全会員制◆キス無しで稼げます</div>
             <p>
-              当店は完全会員制となりますのでキャスト様が安心して働ける環境が整ってまして<br>
+              当店は完全会員制となりますのでキャスト様が安心して働ける環境が整ってまして<br class="pc">
               顧客数にも自信があり365日抜群の稼働力が当店の自慢です★<br>
-              また魅力的なポイントの一つとして基本プレイにキスが含まれていない事！<br>
+              また魅力的なポイントの一つとして基本プレイにキスが含まれていない事！<br class="pc">
               なので未経験の方がスタートしやすいお店です♪
             </p>
           </div>

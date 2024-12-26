@@ -5,8 +5,11 @@
     padding: calc(120vw / (1200 / 100)) 0 calc(30vw / (1200 / 100));
   }
   @include tab {
-    padding-top: calc(120vw / (768 / 100));
+    padding-top: calc(100vw / (768 / 100));
     padding-bottom: 0;
+  }
+  @include sp {
+    padding-top: calc(100vw / (375 / 100));
   }
   &__info {
     display: inline-flex;
@@ -86,6 +89,12 @@
     @include pc {
       padding: calc(10vw / (1200 / 100)) 0;
       font-size: calc(16vw / (1200 / 100));
+    }
+    @include tab {
+      padding: calc(20vw / (768 / 100)) 0;
+      font-size: calc(30vw / (768 / 100));
+      margin: 0 auto calc(240vw / (768 / 100));
+      width: 80%;
     }
   }
 

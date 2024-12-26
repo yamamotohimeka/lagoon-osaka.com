@@ -4,15 +4,15 @@
       <div class="ex__wrap mincho">
 
         <div class="ex__img">
-          <img src="<?php echo $path; ?>assets/images/ex-pr1.png" alt=" La Goonのロゴ">
-          <img src="<?php echo $path; ?>assets/images/ex-pr2.png" alt=" La Goonのロゴ">
+          <img src="<?php echo $path; ?>assets/images/ex-pr1.png" alt="面接から体験まで最短３０分">
+          <img src="<?php echo $path; ?>assets/images/ex-pr2.png" alt="充実の保証制度即日高収入">
         </div>
 
         <div class="ex__text1">
           <p> <span>2</span>時間<span>3</span>万円<b>保証</b></p>
           <p>未経験でも即日稼げます!</p>
           <p><span>6</span>時間<span>7</span>万円<b>保証</b></p>
-          <p>綺麗でスタイル抜群じゃなくて大丈夫！普通の子が一番稼いでいます。</p>
+          <p>綺麗でスタイル抜群じゃなくて大丈夫！<br class="sp">普通の子が一番稼いでいます。</p>
         </div>
 
         <div class="ex__text2">
@@ -43,10 +43,8 @@
         <div class="ex__faq-inner">
           <p class="ex__faq-inner-q">ホテヘルとデリヘル選べるの？</p>
           <p class="ex__faq-inner-a">
-            当店ではメインはホテルヘルスでのお仕事がメインとなっておりますがお客様によってはデリバリー希望の方も
-            おられます為、可能な方のみデリバリーヘルスもお願いしております。<br>
-            ただ中にはデリバリーの方が都合が良い女の子もいらっしゃいますのでそういった方はデリバリー専属で
-            お願いする形になります。ご自分の勤務しやすい方でお仕事お願い致します
+            当店ではメインはホテルヘルスでのお仕事がメインとなっておりますがお客様によってはデリバリー希望の方もおられます為、可能な方のみデリバリーヘルスもお願いしております。<br>
+            ただ中にはデリバリーの方が都合が良い女の子もいらっしゃいますのでそういった方はデリバリー専属でお願いする形になります。ご自分の勤務しやすい方でお仕事お願い致します
         </div>
         <div class="ex__faq-inner">
           <p class="ex__faq-inner-q">友達と体験ってしても大丈夫？</p>
@@ -56,7 +54,7 @@
 
 
         <div class="ex__faq-inner">
-          <p>当店は基本プレイに【キスはありません！】雑費引きなし。今だけ【祝い金15万円】を支給中！<br>
+          <p>当店は基本プレイに【キスはありません！】<br class="sp">雑費引きなし。今だけ【祝い金15万円】を支給中！<br>
             しかも保証制度があるので日々の集客状況に左右されず安定して稼げます！<br>
             是非この機会に体験入店してもてください。
           </p>

@@ -19,7 +19,7 @@
             ?>
         <p>入店日 <?php echo $randomDate; ?></p> <!-- ランダムな日付を表示 -->
       </div>
-      <div class="girlCard-img">
+      <div class="girlCard-img login">
         <img src="<?php echo $path; ?>/assets/img/<?php echo $girl['img'];?>.png" alt="ラグーンの女の子の画像">
       </div>
       <div class="girlCard-info-box">
