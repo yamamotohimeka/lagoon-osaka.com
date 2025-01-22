@@ -46,7 +46,7 @@
     <div class="tab">
       <div class="footer__tabButton-wrapper ">
         <button class="footer__tabButton__link">
-          <a href="tel:0120-000-000">
+          <a href="tel:0120-947-854">
             <img src="<?php echo $path; ?>assets/images/footer-tel.png" alt=" La Goonのロゴ">
           </a>
         </button>
