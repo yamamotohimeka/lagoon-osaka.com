@@ -93,7 +93,7 @@
   </div>
 
 
-  <div class="footer__recruit">
+  <div class="footer__recruit tab">
     <a target="_blank" href="../recruit" class="footer__link">
       <p>求人サイト</p>
     </a>
