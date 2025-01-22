@@ -1,0 +1,382 @@
+.ex {
+  &__bg {
+    width: 100%;
+    height: 952px;
+    background: url(../images/ex-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include pc {
+      height: calc(952vw / (1200 / 100));
+    }
+    @include tab {
+      height: calc(1017vw / (768 / 100));
+    }
+    .container {
+      position: relative;
+      z-index: 0;
+    }
+
+    &-2 {
+      background-color: $blue;
+      width: 100%;
+      padding: 30px 0 57px;
+      @include pc {
+        padding: calc(30vw / (1200 / 100)) 0 calc(57vw / (1200 / 100));
+      }
+      @include tab {
+        padding: calc(30vw / (768 / 100)) 0 calc(58vw / (768 / 100));
+      }
+    }
+  }
+  &__img {
+    img {
+      position: absolute;
+      &:first-child {
+        top: 80px;
+        left: 0;
+        width: 321px;
+        @include pc {
+          top: calc(80vw / (1200 / 100));
+          width: calc(321vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(176vw / (768 / 100));
+          left: calc(182vw / (768 / 100));
+          width: calc(354vw / (768 / 100));
+        }
+      }
+      &:last-child {
+        top: 198px;
+        left: 175px;
+        width: 321px;
+        @include pc {
+          top: calc(198vw / (1200 / 100));
+          left: calc(175vw / (1200 / 100));
+          width: calc(321vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(305vw / (768 / 100));
+          left: calc(373vw / (768 / 100));
+          width: calc(354vw / (768 / 100));
+        }
+      }
+    }
+  }
+
+  &__text1 {
+    position: absolute;
+    top: 570px;
+    left: 54px;
+    @include pc {
+      top: calc(570vw / (1200 / 100));
+      left: calc(54vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(635vw / (768 / 100));
+      left: calc(90vw / (768 / 100));
+    }
+    p {
+      color: $blue;
+      line-height: 1;
+      &:first-child {
+        padding-left: 46px;
+        font-size: 69px;
+        font-weight: lighter;
+        @include pc {
+          padding-left: calc(46vw / (1200 / 100));
+          font-size: calc(69vw / (1200 / 100));
+        }
+        @include tab {
+          padding-left: calc(35vw / (768 / 100));
+          font-size: calc(63vw / (768 / 100));
+        }
+        span {
+          font-size: 95px;
+          font-weight: bold;
+          @include pc {
+            font-size: calc(95vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(98vw / (768 / 100));
+          }
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+      &:nth-child(2) {
+        display: inline-block;
+        font-size: 37px;
+        clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
+        background-color: $blue;
+        color: #fff;
+        padding: 7px 87px;
+        @include pc {
+          font-size: calc(37vw / (1200 / 100));
+          padding: calc(7vw / (1200 / 100)) calc(87vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(40vw / (768 / 100));
+          padding: calc(7vw / (768 / 100)) calc(87vw / (768 / 100));
+        }
+      }
+      &:nth-child(3) {
+        font-weight: lighter;
+        font-size: 85px;
+        @include pc {
+          font-size: calc(85vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(80vw / (768 / 100));
+        }
+        span {
+          font-size: 117px;
+          font-weight: bold;
+          @include pc {
+            font-size: calc(117vw / (1200 / 100));
+          }
+          @include tab {
+            font-size: calc(110vw / (768 / 100));
+          }
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+      &:nth-child(4) {
+        font-size: 31px;
+        padding-left: 25px;
+        @include pc {
+          font-size: calc(31vw / (1200 / 100));
+          padding-left: calc(25vw / (1200 / 100));
+        }
+        @include tab {
+          font-size: calc(34vw / (768 / 100));
+          padding-top: calc(20vw / (768 / 100));
+          padding-left: calc(10vw / (768 / 100));
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__text2 {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 10px;
+
+    position: absolute;
+    top: 68px;
+    right: 14px;
+    font-size: 46px;
+    color: #fff;
+    @include pc {
+      top: calc(68vw / (1200 / 100));
+      right: calc(14vw / (1200 / 100));
+      font-size: calc(46vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(50vw / (768 / 100));
+      right: calc(605vw / (768 / 100));
+      font-size: calc(49vw / (768 / 100));
+      gap: calc(13vw / (768 / 100));
+    }
+    p {
+      writing-mode: vertical-rl;
+      letter-spacing: 0.005em;
+      background-color: $blue;
+      line-height: 1.2;
+      clip-path: polygon(80% 0%, 100% 3%, 100% 97%, 0 100%, 0 3%);
+      padding: 30px 0;
+      &:last-child {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__faq {
+    h2 {
+      color: $yellow;
+      font-size: 51px;
+      font-weight: bold;
+      @include pc {
+        font-size: calc(51vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(64vw / (768 / 100));
+        text-align: center;
+      }
+    }
+    &-inner {
+      padding-top: 70px;
+      @include pc {
+        padding-top: calc(70vw / (1200 / 100));
+      }
+      @include tab {
+        padding-top: calc(31vw / (768 / 100));
+      }
+
+      &:first-of-type {
+        padding-top: 37px;
+        @include pc {
+          padding-top: calc(37vw / (1200 / 100));
+        }
+        @include tab {
+          padding-top: calc(53vw / (768 / 100));
+        }
+      }
+      &:last-child {
+        line-height: 1.5;
+        font-size: 23px;
+        font-family: initial;
+        font-weight: lighter;
+        @include pc {
+          padding: calc(50vw / (1200 / 100)) calc(40vw / (1200 / 100));
+          font-size: calc(23vw / (1200 / 100));
+        }
+        @include tab {
+          padding: calc(25vw / (768 / 100)) calc(40vw / (768 / 100)) 0;
+          font-size: calc(26vw / (768 / 100));
+          line-height: 1.4;
+        }
+      }
+      &-q {
+        padding-bottom: 20px;
+        padding-left: 86px;
+        position: relative;
+        font-size: 32px;
+        color: $yellow;
+        border-bottom: 2px dotted #fff;
+        @include pc {
+          padding-bottom: calc(20vw / (1200 / 100));
+          padding-left: calc(86vw / (1200 / 100));
+          font-size: calc(32vw / (1200 / 100));
+        }
+        @include tab {
+          padding-bottom: calc(35vw / (768 / 100));
+          padding-left: calc(102vw / (768 / 100));
+          font-size: calc(32vw / (768 / 100));
+        }
+        &::before {
+          content: "Q";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 22px;
+          width: 40px;
+          height: 40px;
+          font-size: 32px;
+          color: $blue;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #fff;
+          @include pc {
+            font-size: calc(32vw / (1200 / 100));
+            width: calc(40vw / (1200 / 100));
+            height: calc(40vw / (1200 / 100));
+          }
+          @include tab {
+            left: calc(30vw / (768 / 100));
+            top: calc(-6vw / (768 / 100));
+            font-size: calc(38vw / (768 / 100));
+            width: calc(50vw / (768 / 100));
+            height: calc(50vw / (768 / 100));
+          }
+        }
+        @include tab {
+          &::after {
+            position: absolute;
+            top: calc(-6vw / (768 / 100));
+            right: calc(29vw / (768 / 100));
+            content: "";
+            background: url(../images/faq_open-icon.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: calc(50vw / (768 / 100));
+            height: calc(50vw / (768 / 100));
+            transition: 0.3s all ease-in-out;
+            display: block;
+          }
+        }
+      }
+      &-a {
+        margin-top: 12px;
+        padding-left: 86px;
+        position: relative;
+        color: #fff;
+        font-size: 23px;
+        line-height: 1.4;
+        @include pc {
+          margin-top: calc(12vw / (1200 / 100));
+          padding-left: calc(86vw / (1200 / 100));
+          font-size: calc(23vw / (1200 / 100));
+        }
+        @include tab {
+          margin-top: 0;
+          padding-left: 0;
+          font-size: calc(28vw / (768 / 100));
+          height: auto;
+          max-height: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.6s ease-in-out;
+        }
+        &::before {
+          content: "A";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 22px;
+          width: 40px;
+          height: 40px;
+          font-size: 32px;
+          color: #fff;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #478ca8;
+          @include pc {
+            font-size: calc(32vw / (1200 / 100));
+            width: calc(40vw / (1200 / 100));
+            height: calc(40vw / (1200 / 100));
+          }
+          @include tab {
+            left: calc(30vw / (768 / 100));
+            top: calc(-6vw / (768 / 100));
+            font-size: calc(38vw / (768 / 100));
+            width: calc(50vw / (768 / 100));
+            height: calc(50vw / (768 / 100));
+          }
+        }
+      }
+      .ex__faq-inner-q.q-open {
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+      .a-open {
+        &::after {
+          transform: rotate(-45deg);
+        }
+
+        @include tab {
+          max-height: calc(420vw / (768 / 100));
+          margin-top: calc(35vw / (768 / 100));
+          margin-bottom: calc(32vw / (768 / 100));
+          visibility: visible;
+          opacity: 1;
+          padding-left: calc(102vw / (768 / 100));
+          font-size: calc(32vw / (768 / 100));
+        }
+        @include sp {
+          max-height: calc(290vw / (440 / 100));
+        }
+        p {
+          @include tab {
+            animation: 0.4s 0.6s ease-out forwards;
+          }
+        }
+      }
+    }
+  }
+}

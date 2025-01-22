@@ -1,0 +1,252 @@
+.form {
+  color: #787878;
+  font-size: 22px;
+  padding: 140px 0 95px 131px;
+  @include pc {
+    padding: calc(140vw / (1200 / 100)) 0 calc(95vw / (1200 / 100))
+      calc(131vw / (1200 / 100));
+    font-size: calc(22vw / (1200 / 100));
+  }
+  @include tab {
+    padding: calc(80vw / (768 / 100)) 3%;
+    font-size: calc(32vw / (768 / 100));
+    width: 100%;
+  }
+
+  .error {
+    display: block;
+    position: absolute;
+    top: 120%;
+    left: 30%;
+    width: 100%;
+    color: red;
+    box-sizing: border-box;
+    @include tab {
+      top: 105%;
+      left: 0;
+      font-size: calc(26vw / (768 / 100));
+    }
+  }
+  .hissu {
+    position: relative;
+    &::after {
+      content: "必須";
+      position: absolute;
+      right: 22px;
+      bottom: 3px;
+      padding: 8px;
+      color: #fff;
+      font-size: 20px;
+      @include pc {
+        font-size: calc(20vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(25vw / (768 / 100));
+        left: calc(320vw / (768 / 100));
+        right: unset;
+      }
+    }
+  }
+
+  &-box {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0;
+    @include pc {
+      margin: calc(40vw / (1200 / 100)) 0;
+    }
+    @include tab {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: calc(40vw / (768 / 100)) 0;
+    }
+
+    &-input {
+      width: 62%;
+      @include tab {
+        width: 100%;
+      }
+    }
+    label {
+      width: 38%;
+      padding: 8px 0;
+      text-align: left;
+      letter-spacing: 0.2rem;
+      color: #fff;
+      @include pc {
+        padding: calc(8vw / (1200 / 100)) 0;
+      }
+      @include tab {
+        width: 100%;
+      }
+
+      &-text {
+        width: 100px;
+        @include pc {
+          width: calc(100vw / (1200 / 100));
+        }
+      }
+    }
+    input {
+      width: 50%;
+      padding: 8px 12px;
+      background-color: #fff;
+      @include pc {
+        padding: calc(8vw / (1200 / 100)) calc(12vw / (1200 / 100));
+      }
+      @include tab {
+        width: 100%;
+      }
+    }
+    &-select {
+      select {
+        width: 50%;
+        padding: 8px 12px;
+        background-color: #fff;
+        color: #787878;
+        @include tab {
+          width: 100%;
+        }
+      }
+    }
+  }
+  textarea {
+    width: 50%;
+    height: 373px;
+    background-color: #fff;
+    padding: 8px 12px;
+    resize: none;
+    @include pc {
+      height: calc(373vw / (1200 / 100));
+    }
+    @include tab {
+      width: 100%;
+      height: calc(540vw / (768 / 100));
+    }
+  }
+
+  &-textarea {
+    align-items: flex-start;
+  }
+
+  &-submit {
+    position: relative;
+    margin-top: 120px;
+    text-align: center;
+    @include pc {
+      margin-top: calc(76vw / (1200 / 100));
+    }
+    @include tab {
+      margin-top: calc(30vw / (768 / 100));
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 590px;
+      width: 42px;
+      height: 34px;
+      transform: translateY(-50%);
+      @include pc {
+        left: calc(590vw / (1200 / 100));
+        width: calc(42vw / (1200 / 100));
+        height: calc(34vw / (1200 / 100));
+      }
+      @include tab {
+        left: calc(428vw / (768 / 100));
+      }
+      @include sp {
+        left: calc(278vw / (440 / 100));
+        width: calc(25vw / (440 / 100));
+        height: calc(20vw / (440 / 100));
+      }
+    }
+    input {
+      width: 47%;
+      padding: 16px 0;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: 2rem;
+      text-align: center;
+      background: #000000;
+      @include pc {
+        padding: calc(20vw / (1200 / 100)) 0;
+        font-size: calc(30vw / (1200 / 100));
+      }
+      @include tab {
+        font-size: calc(32vw / (768 / 100));
+        width: 100%;
+        padding: calc(20vw / (768 / 100)) 0;
+      }
+      @include sp {
+        width: 100%;
+        padding: calc(12vw / (440 / 100)) 0;
+        font-size: calc(22vw / (440 / 100));
+      }
+    }
+  }
+
+  .box {
+    margin: 0 auto;
+
+    .form-confirm {
+      color: $gray;
+      padding-bottom: 40px;
+      text-align: center;
+      line-height: 1.5;
+      h4 {
+        font-size: 28px;
+        padding-bottom: 10px;
+      }
+    }
+    .form-box-input {
+      color: $gray;
+    }
+  }
+}
+
+/********************************************
+* Now Loading
+********************************************/
+#form-load {
+  display: none;
+}
+.loader {
+  margin: 0 auto;
+  border: 12px solid #fafafa;
+  border-radius: 50%;
+  border-top: 12px solid #3498db;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.load1 {
+  animation: sk-scaleout 1s infinite ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 201;
+  text-align: center;
+  background-color: #b1b1b1;
+  color: #ffffff;
+  opacity: 0.8;
+  width: 800px;
+  p {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+  }
+}

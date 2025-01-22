@@ -1,0 +1,178 @@
+.treat {
+  &__bg {
+    height: 941px;
+    background: url(../images/treat-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include pc {
+      height: calc(941vw / (1200 / 100));
+    }
+
+    @include tab {
+      height: calc(1208vw / (768 / 100));
+      background-position: 62% 0;
+    }
+    .container {
+      position: relative;
+    }
+    &2 {
+      background-color: $green;
+      padding: 66px 0 71px;
+      text-align: center;
+      @include pc {
+        padding: calc(66vw / (1200 / 100)) 0 calc(71vw / (1200 / 100));
+      }
+      @include tab {
+        padding: calc(50vw / (768 / 100)) 0 calc(51vw / (768 / 100));
+      }
+    }
+  }
+  &__text1 {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 68px;
+    left: 16px;
+    font-size: 46px;
+    color: #fff;
+    @include pc {
+      font-size: calc(46vw / (1200 / 100));
+    }
+    @include tab {
+      font-size: calc(46vw / (768 / 100));
+      top: calc(40vw / (768 / 100));
+      left: calc(16vw / (768 / 100));
+      gap: calc(15vw / (768 / 100));
+    }
+    p {
+      writing-mode: vertical-rl;
+      letter-spacing: 0.005em;
+      background-color: $green;
+      line-height: 1.2;
+      clip-path: polygon(80% 0%, 100% 3%, 100% 97%, 0 100%, 0 3%);
+      padding: 30px 0;
+      @include tab {
+        padding: calc(45vw / (768 / 100)) 0;
+        &:last-child {
+          margin-top: calc(60vw / (768 / 100));
+        }
+      }
+    }
+  }
+  &__text2 {
+    position: absolute;
+    top: 104px;
+    left: 183px;
+    color: $green;
+    font-size: 31px;
+    @include pc {
+      top: calc(104vw / (1200 / 100));
+      left: calc(183vw / (1200 / 100));
+      font-size: calc(31vw / (1200 / 100));
+    }
+    @include tab {
+      top: calc(1025vw / (768 / 100));
+      left: calc(38vw / (768 / 100));
+      font-size: calc(37vw / (768 / 100));
+    }
+    p {
+      line-height: 1.25;
+      letter-spacing: -0.1rem;
+
+      @include tab {
+        letter-spacing: calc(0.4vw / (768 / 100));
+      }
+
+      &:nth-child(2) {
+        padding-left: 30px;
+        @include pc {
+          padding-left: calc(30vw / (1200 / 100));
+        }
+        @include tab {
+          padding-left: calc(30vw / (768 / 100));
+        }
+      }
+      &:nth-child(3) {
+        padding-left: 60px;
+        @include pc {
+          padding-left: calc(60vw / (1200 / 100));
+        }
+        @include tab {
+          padding-left: calc(60vw / (768 / 100));
+        }
+      }
+    }
+  }
+  &__img {
+    img {
+      position: absolute;
+      &:first-child {
+        top: 319px;
+        left: 252px;
+        width: 278px;
+        @include pc {
+          top: calc(319vw / (1200 / 100));
+          left: calc(272vw / (1200 / 100));
+          width: calc(278vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(418vw / (768 / 100));
+          left: calc(230vw / (768 / 100));
+          width: calc(260vw / (768 / 100));
+        }
+      }
+      &:nth-child(2) {
+        top: 562px;
+        left: 517px;
+        width: 270px;
+        @include pc {
+          top: calc(562vw / (1200 / 100));
+          left: calc(517vw / (1200 / 100));
+          width: calc(270vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(647vw / (768 / 100));
+          left: calc(476vw / (768 / 100));
+          width: calc(270vw / (768 / 100));
+        }
+      }
+      &:last-child {
+        top: 603px;
+        left: 180px;
+        width: 268px;
+        @include pc {
+          top: calc(603vw / (1200 / 100));
+          left: calc(180vw / (1200 / 100));
+          width: calc(268vw / (1200 / 100));
+        }
+        @include tab {
+          top: calc(690vw / (768 / 100));
+          left: calc(151vw / (768 / 100));
+          width: calc(262vw / (768 / 100));
+        }
+      }
+    }
+  }
+
+  &__text3 {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.6;
+    letter-spacing: -0.04rem;
+    display: inline-block;
+    @include pc {
+      font-size: calc(22vw / (1200 / 100));
+    }
+    @include tab {
+      font-size: calc(29vw / (768 / 100));
+      padding: 0 5%;
+      line-height: 1.42;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}

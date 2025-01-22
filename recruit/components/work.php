@@ -7,7 +7,7 @@
       <div class="work__wrap">
         <div class="work__text2 mincho pc">
           <p>普通の女性の方が確実に稼げるのが当店です<br>
-            給与面も他店に比べても割高です</p>
+            給与面も他店に比べて高くなっております</p>
         </div>
         <div class="work__price mincho">
           <div class="work__price-item">
@@ -42,7 +42,7 @@
       </div>
       <div class="work__text2 mincho tab">
         <p>普通の女性の方が確実に稼げるのが当店です<br>
-          給与面も他店に比べても割高です</p>
+          給与面も他店に比べて高くなっております</p>
       </div>
       <p class="work__note tab">※日給保証は全員同じ金額になりますのでご安心くださいませ。<br>出勤する時間数によって変動致します。</p>
     </div>

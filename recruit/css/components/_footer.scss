@@ -1,0 +1,238 @@
+.footer {
+  &__bg {
+    background-color: $pink;
+    padding: 36px 0;
+    @include pc {
+      padding: calc(36vw / (1200 / 100)) 0;
+    }
+    @include tab {
+      padding: unset;
+    }
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      width: 285px;
+      @include pc {
+        width: calc(285vw / (1200 / 100));
+      }
+    }
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 33px;
+      @include pc {
+        gap: calc(33vw / (1200 / 100));
+      }
+
+      &-link {
+        font-size: 17px;
+        @include pc {
+          font-size: calc(17vw / (1200 / 100));
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 95px 0 50px;
+    @include pc {
+      padding: calc(95vw / (1200 / 100)) 0 calc(50vw / (1200 / 100));
+    }
+    &__btn {
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      padding: 16px 20px;
+      width: 80%;
+      font-size: 24px;
+      background-color: #7cc6cc;
+      color: #fff;
+      @include pc {
+        font-size: calc(24vw / (1200 / 100));
+      }
+    }
+    &__banner {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      padding: 74px 0 132px;
+      @include pc {
+        padding: calc(74vw / (1200 / 100)) 0 calc(132vw / (1200 / 100));
+      }
+    }
+    &__copyright {
+      text-align: center;
+      font-size: 12px;
+      color: #000;
+      @include pc {
+        font-size: calc(12vw / (1200 / 100));
+      }
+    }
+  }
+
+  &__tabButton {
+    &__link {
+      height: calc(100vw / (768 / 100));
+      img {
+        height: 100%;
+      }
+    }
+    &-wrapper {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: calc(20vw / (768 / 100)) 0;
+      background-color: $pink;
+      z-index: 100;
+      width: 100%;
+    }
+    color: #fff;
+    width: calc(105vw / (768 / 100));
+    height: calc(105vw / (768 / 100));
+    border: 7px solid #fff;
+    border-radius: 50px;
+    z-index: 100;
+    position: relative;
+    @include sp {
+      border: calc(4vw / (440 / 100)) solid #fff;
+    }
+    span {
+      position: absolute;
+      width: calc(47vw / (768 / 100));
+      left: calc(22vw / (768 / 100));
+      height: calc(7vw / (768 / 100));
+      background: #fff;
+      border-radius: 10px;
+      transition: 0.3s all ease-in-out;
+    }
+    span:nth-of-type(1) {
+      top: calc(18vw / (768 / 100));
+    }
+
+    span:nth-of-type(2) {
+      top: calc(32vw / (768 / 100));
+    }
+
+    span:nth-of-type(3) {
+      top: calc(45vw / (768 / 100));
+    }
+    span:nth-of-type(3)::after {
+      content: "MENU";
+      position: absolute;
+      display: block;
+      top: calc(10vw / (440 / 100));
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      color: $pink;
+      font-size: calc(28vw / (768 / 100));
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: #fff;
+      font-weight: bold;
+      font-size: calc(16vw / (768 / 100));
+    }
+    &-active:nth-of-type(1) {
+      width: 60% !important;
+      top: calc(35vw / (768 / 100)) !important;
+      left: calc(20vw / (768 / 100));
+      transform: rotate(45deg);
+    }
+    &-active:nth-of-type(2) {
+      width: 60% !important;
+      top: calc(35vw / (768 / 100)) !important;
+      left: calc(20vw / (768 / 100));
+      transform: rotate(-45deg);
+    }
+    &-active:nth-of-type(3) {
+      background-color: transparent !important;
+    }
+    &-active:nth-of-type(3)::after {
+      content: "Close" !important;
+    }
+    &-bg {
+      display: block;
+      width: calc(140vw / (768 / 100));
+      height: calc(130vw / (768 / 100));
+      right: calc(30vw / (768 / 100));
+      top: calc(44vw / (768 / 100));
+      border-radius: 14px;
+      z-index: 99;
+      overflow: hidden;
+      @include sp {
+        width: calc(80vw / (440 / 100));
+        height: calc(80vw / (440 / 100));
+        right: calc(22vw / (440 / 100));
+        top: calc(22vw / (440 / 100));
+      }
+    }
+  }
+
+  /********************************************
+* ハンバーガーメニュー
+********************************************/
+  &__tabNav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $pink;
+    color: #fff;
+    transition: 0.6s all ease-out;
+    z-index: 90;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: calc(24vw / (768 / 100));
+      margin-top: calc(-22vw / (768 / 100));
+      vertical-align: middle;
+    }
+    &__list {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4%;
+      top: -4%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      padding: calc(50vw / (768 / 100)) 0;
+      transform: translate(-50%);
+
+      &-link {
+        font-size: calc(26vw / (768 / 100));
+        font-weight: bolder;
+        text-align: center;
+        line-height: 1.4;
+
+        @include sp {
+          font-size: calc(24vw / (440 / 100));
+          line-height: 1.6;
+        }
+      }
+    }
+    &-active {
+      left: 0 !important;
+      z-index: 100;
+    }
+  }
+}
