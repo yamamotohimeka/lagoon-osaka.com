@@ -105,8 +105,6 @@
         <a href="https://yarowork.jp/kansai/search/?pref%5B%5D=27" target="_blank" rel="noopener">
           <img src="<?php echo $path; ?>assets/images/banner/yarouwork.gif" alt="野郎ワーク">
         </a>
-        <a rel="nofollow" href="https://mens-qzin.jp/" target="_blank">
-          <img src="https://mens-qzin.jp/assets/img/entry/pc/link/mens640_80.png" alt="稼げる男性高収入求人・アルバイトはメンズバニラ"></a>
       </div>
       <p class="footer__bottom__copyright">Copyright © lagoon all rights reserved</p>
     </div>

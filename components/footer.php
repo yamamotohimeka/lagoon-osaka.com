@@ -98,6 +98,14 @@
       <p>求人サイト</p>
     </a>
   </div>
+
+  <div class="tab" style="padding-bottom:120px;">
+    <p style="text-align: center; padding-bottom: 3px;margin: 0;">
+      <a rel="nofollow" href="https://mens-qzin.jp/" target="_blank"><img
+          src="https://mens-qzin.jp/assets/img/entry/pc/link/mens200_40.png" width="200" height="40" border="0"
+          alt="稼げる男性高収入求人・アルバイトはメンズバニラ"></a>
+    </p>
+  </div>
   <div class="container tab">
 
     <div class="footer__tab__nav">
@@ -111,6 +119,14 @@
       </div>
     </div>
   </div>
+  <div class="pc">
+    <p style="text-align: center; padding-bottom: 3px;margin: 0;">
+      <a rel="nofollow" href="https://mens-qzin.jp/" target="_blank"><img
+          src="https://mens-qzin.jp/assets/img/entry/pc/link/mens640_80.png" width="640" height="80" border="0"
+          alt="稼げる男性高収入求人・アルバイトはメンズバニラ"></a>
+    </p>
+  </div>
+
 </footer>
 
 
