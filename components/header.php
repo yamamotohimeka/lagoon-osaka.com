@@ -32,6 +32,15 @@
   <meta name="twitter:card" content="summary_large_image" />
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PB3WM1L4E8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PB3WM1L4E8');
+  </script>
 </head>
 
 <body>
