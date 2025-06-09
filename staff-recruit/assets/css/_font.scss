@@ -6,10 +6,15 @@
 @font-face {
   font-family: "A-OTF-RyuminPr6-Medium";
   src: url("../font/A-OTF-RyuminPr6-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Didot";
+  src: url("../font/Didot.ttc") format("opentype");
   font-weight: 400;
 }
 @font-face {
-  font-family: "A-OTF-RyuminPr6-Medium";
+  font-family: "AP-OTF-BunkyuMdMinStd-EB";
   src: url("../font/AP-OTF-BunkyuMdMinStd-EB.otf") format("opentype");
   font-weight: 800;
 }
