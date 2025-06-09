@@ -44,6 +44,7 @@
       font-family: $ryumin-regular;
       font-size: 74rem;
       @include tab {
+        border-bottom: 0.4px solid #fff;
         font-size: 41rem;
       }
       @include sp {
@@ -149,6 +150,7 @@
     @include tab {
       width: 72%;
       margin-bottom: 32rem;
+      border: 0.4px solid #fff;
     }
     &--list{
       display: grid;
@@ -160,6 +162,9 @@
       }
       &:nth-child(1){
         border-bottom: 1px solid #fff;
+        @include tab {
+          border-bottom: 0.4px solid #fff;
+        }
       }
       .t-white{
         display: inline-flex;
@@ -222,6 +227,7 @@
       border: 1px solid #fff;
       @include tab {
         padding: 8rem 16rem;
+        border: 0.4px solid #fff;
       }
       @include sp {
         padding: 4rem 4rem;
@@ -246,11 +252,12 @@
     &--top{
       width: clamp(  400px, 66vw, 796px );
       padding: 24rem 20rem;
-      border:1px solid #fff;
+      border: 1px solid #fff;
       position: relative;
       @include tab {
         width: 100%;
         margin-bottom: 32rem;
+        border: 0.4px solid #fff;
         text-align: center;
       }
       &::after{
@@ -262,6 +269,9 @@
         right: 2rem;
         bottom: 2rem;
         z-index: -1;
+        @include tab {
+          border: 0.4px solid #fff;
+        }
       }
       .t-gold{
         margin-bottom: 8rem;
