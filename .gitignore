@@ -7,4 +7,6 @@ recruit/php_mailer/vendor/
 recruit/php_mailer/.env
 recruit/assets/css/style.css
 recruit/assets/css/style.css.map
+recruit/css/style.css
+recruit/css/style.css.map
 recruit/php_mailer/composer.lock
