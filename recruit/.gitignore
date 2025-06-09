@@ -2,8 +2,3 @@
 !/.gitignore
 /css/style.css
 /css/style.css.map
-/assets/css/style.css
-/assets/css/style.css.map
-/php_mailer/.env
-/php_mailer/vendor/
-php_mailer/composer.lock
