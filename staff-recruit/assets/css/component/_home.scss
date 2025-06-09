@@ -247,6 +247,7 @@
         left: 2rem;
         right: 2rem;
         bottom: 2rem;
+        z-index: -1;
       }
       .t-gold{
         margin-bottom: 8rem;
@@ -261,6 +262,7 @@
       }
       .t-white{
         font-size: 30rem;
+        line-height: 1.2;
         @include tab {
           font-size: 27rem;
         }
