@@ -32,8 +32,11 @@
           </ul>
         </nav>
         <div class="footer__recruit">
-          <a target="_blank" href="../recruit" class="footer__link">
-            <p>求人サイト</p>
+          <a target="_blank" href="../recruit" class="footer__link footer__recruit--link">
+            女性求人サイト
+          </a>
+          <a target="_blank" href="../staff-recruit" class="footer__link footer__recruit--link">
+            スタッフ求人サイト
           </a>
         </div>
       </div>
@@ -94,8 +97,11 @@
 
 
   <div class="footer__recruit tab">
-    <a target="_blank" href="../recruit" class="footer__link">
-      <p>求人サイト</p>
+    <a target="_blank" href="../recruit" class="footer__link footer__recruit--link">
+      求人サイト
+    </a>
+    <a target="_blank" href="../staff-recruit" class="footer__link footer__recruit--link">
+      スタッフ求人サイト
     </a>
   </div>
 

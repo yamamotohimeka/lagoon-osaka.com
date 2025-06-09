@@ -82,19 +82,25 @@
     }
   }
   &__recruit {
-    background-color: #323232;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 16px;
-    @include pc {
-      padding: calc(10vw / (1200 / 100)) 0;
-      font-size: calc(16vw / (1200 / 100));
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
     @include tab {
-      padding: calc(20vw / (768 / 100)) 0;
-      font-size: calc(30vw / (768 / 100));
-      margin: 0 auto calc(240vw / (768 / 100));
-      width: 80%;
+      display: flex!important;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    &--link{
+      display: block;
+      padding: 10px 0;
+      background-color: #323232;
+      font-size: 16px;
+      text-align: center;
+      @include tab {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   }
 

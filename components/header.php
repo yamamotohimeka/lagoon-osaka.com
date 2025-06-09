@@ -177,8 +177,13 @@
               </a>
             </li>
             <li class="header__tabNav__list-link">
-              <a href="<?php echo $path; ?>recruit.php" class="header__link">
+              <a href="<?php echo $path; ?>/recruit" target="_blank" class="header__link">
                 求人
+              </a>
+            </li>
+            <li class="header__tabNav__list-link">
+              <a href="<?php echo $path; ?>/staff-recruit" target="_blank" class="header__link">
+                スタッフ求人
               </a>
             </li>
           </ul>
