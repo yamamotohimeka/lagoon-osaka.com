@@ -19,7 +19,7 @@
       <p class="home__copy--sub img_res">
         <img src="<?php echo $path; ?>assets/img/copySub_tab.webp" alt="臨時昇給あり">
       </p>
-      <p class="home__copy--light img_res">
+      <p class="home__copy--light">
         <img src="<?php echo $path; ?>assets/img/light.png" alt="">
       </p>
     </div>
