@@ -1,7 +1,7 @@
 .footer{
   &__title{
     margin-bottom: 80rem;
-    padding-bottom: 8rem;
+    padding-bottom: 16rem;
     background-color: $gray;
     @include tab {
       margin-bottom: 40rem;
@@ -10,11 +10,14 @@
       border-bottom: 1px solid #fff;
       .titleText{
         display: block;
+        padding-top: 12rem;
         font-family: $Didot;
         font-size: 74rem;
+        line-height: 1;
         transform: skew(-12deg);
         text-align: center;
         @include tab {
+          padding-bottom: 8rem;
           font-size: 56rem;
           @include sp {
             font-size: 32rem;
