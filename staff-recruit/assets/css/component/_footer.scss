@@ -1,0 +1,55 @@
+.footer{
+  &__title{
+    margin-bottom: 80rem;
+    padding-bottom: 8rem;
+    background-color: $gray;
+    @include tab {
+      margin-bottom: 40rem;
+    }
+    &--inner{
+      border-bottom: 1px solid #fff;
+      .titleText{
+        display: block;
+        font-family: $Didot;
+        font-size: 74rem;
+        transform: skew(-12deg);
+        text-align: center;
+        @include tab {
+          font-size: 56rem;
+          @include sp {
+            font-size: 28rem;
+          }
+        }
+      }
+    }
+  }
+  &__sales{
+    width: clamp( 0px, 80%, 980px );
+    margin: 0 auto 80rem;
+    @include tab {
+      width: 100%;
+    }
+    &--link{
+      display: block;
+      width: 100%;
+      padding: 0.8em;
+      background-color: #fff;
+      color: #000;
+      font-family: $ryumin-medium;
+      font-weight: 500;
+      font-size: 24rem;
+      text-align: center;
+      @include sp {
+        font-size: 16rem;
+      }
+    }
+  }
+  &__copyright{
+    margin-bottom: 20rem;
+    font-size: 0.8em;
+    text-align: center;
+    @include sp {
+      font-size: 0.4em;
+    }
+  }
+}

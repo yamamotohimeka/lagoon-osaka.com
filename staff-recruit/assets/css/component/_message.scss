@@ -1,0 +1,76 @@
+.message{
+  position: relative;
+  padding-bottom: 160rem;
+  @include tab {
+    padding-bottom: 80rem;
+  }
+  @include sp {
+    padding-bottom: 40rem;
+  }
+  .messageBg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__text01{
+    width: clamp( 300px, 48vw, 581px );
+    margin: 0 auto;
+    @include tab {
+      width: 80%;
+    }
+  }
+  &__text02{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16rem 40rem;
+    margin-bottom: 80rem;
+    @include tab {
+      gap: 8rem;
+      margin-bottom: 16rem;
+    }
+    &--list{
+      display: inline-block;
+      span{
+        color: $gold;
+        &:nth-child(2n+1){
+          font-size: 45rem;
+          @include tab {
+            font-size: 49rem;
+          }
+          @include sp {
+            font-size: 24rem;
+          }
+        }
+        &:nth-child(2n){
+          font-size: 60rem;
+          @include tab {
+            font-size: 65rem;
+          }
+          @include sp {
+            font-size: 32rem;
+          }
+        }
+      }
+    }
+  }
+  &__text03{
+    font-size: 30rem;
+    line-height: calc( 53 / 30 );
+    text-align: center;
+    @include tab {
+      line-height: calc( 41 / 30 );
+    }
+    @include sp {
+      font-size: 16rem;
+    }
+    span{
+      font-size: 40rem;
+      @include sp {
+        font-size: 24rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.feature{
+  @include tab {
+    padding-top: 80rem;
+  }
+  @include sp {
+    padding-top: 40rem;
+  }
+  &__section{
+    margin-bottom: 40rem;
+    &--text{
+      width: 90%;
+      margin: 0 auto;
+      @include tab {
+        width: 98%;
+      }
+      .featureTitle{
+        margin-bottom: 8rem;
+        color: $blue;
+        font-size: 75rem;
+        line-height: 1em;
+        letter-spacing: 0.1em;
+        @include tab {
+          font-size: 55rem;
+        }
+        @include sp {
+          font-size: 30rem;
+        }
+      }
+      .featureDesc{
+        margin-bottom: 8rem;
+        font-size: 30rem;
+        line-height: calc( 35 / 25 );
+        @include tab {
+          font-size: 25rem;
+        }
+        @include sp {
+          font-size: 14rem;
+        }
+      }
+    }
+    &--border{
+      display: flex;
+      width: 100%;
+    }
+  }
+}
