@@ -124,25 +124,29 @@
       width: clamp( 160px, 22vw, 270px );
       top: 0;
       right: 0;
-      transform: translate( 50%,-50% );
+      transform: translate( 84%,-28% );
       @include tab {
-        right: 2vw;
-        width: 30%;
+        width: clamp( 80px, 22vw, 270px );
+        transform: translate( 32%,-56% );
       }
     }
     &--light{
       position: absolute;
-      width: 14vw;
-      height:14vw;
+      width: clamp( 160px, 22vw, 270px );
+      height: clamp( 160px, 22vw, 270px );
       object-fit: contain;
       top: 0;
       right: 0;
-      transform: translate( 100%, -70% );
+      transform: translate( 132%, -48% );
       mix-blend-mode: screen;
       @include tab {
-        top: -4vw;
-        right: 2vw;
-        width: 30%;
+        width: clamp( 80px, 22vw, 270px );
+        height: clamp( 80px, 22vw, 270px );
+        transform: translate( 82%, -72% );
+      }
+      img{
+        width: 100%;
+        height: 100%;
       }
     }
   }
