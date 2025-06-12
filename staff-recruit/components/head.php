@@ -55,7 +55,7 @@ function token_chk($token)
     content="大阪 「La Goon」のスタッフ求人サイトです｡高収入を掴み取れるチャンスがあります。" />
   <meta property="og:url" content="<?php echo $url; ?>" />
   <meta property="og:site_name" content="ラグーン スタッフ求人サイト" />
-  <meta property="og:image" content="<?php echo $url; ?>assets/img/ogp.webp" />
+  <meta property="og:image" content="<?php echo $url; ?>assets/img/ogp.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
