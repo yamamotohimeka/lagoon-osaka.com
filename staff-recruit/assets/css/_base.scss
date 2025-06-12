@@ -115,17 +115,23 @@ img {
   background-color: #fff;
   outline: 4px solid #000;
   outline-offset: -5rem;
-  color: #000;
-  font-size: 81rem;
   text-align: center;
-  @include tab {
-    font-size: 55rem;
-  }
   @include sp {
     margin-bottom: 24rem;
     outline: 2px solid #000;
     outline-offset: -4rem;
-    font-size: 30rem;
+  }
+  span{
+    color: #000;
+    font-family: $ryumin-medium;
+    font-weight: 500;
+    font-size: 81rem;
+    @include tab {
+      font-size: 55rem;
+    }
+    @include sp {
+      font-size: 30rem;
+    }
   }
 }
 

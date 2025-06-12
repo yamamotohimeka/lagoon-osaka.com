@@ -10,6 +10,8 @@
     &--text{
       width: 90%;
       margin: 0 auto;
+      font-family: $ryumin-medium;
+      font-weight: 500;
       @include tab {
         width: 98%;
       }
