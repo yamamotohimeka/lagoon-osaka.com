@@ -71,17 +71,19 @@
           もちろん未経験者も大歓迎です。
         </p>
       </div>
-      <div class="home__msg--bottom noTab">
-        <p><span class="t-bunkyu">La Goon</span><span>では</span></p>
-        <ul>
-          <li>・稼いで大物になりたい</li>
-          <li>・自分のお店を持ちたい</li>
-          <li>・お金持ちになりたい</li>
-          <li>・ナイトワークビジネスのノウハウを学びたい</li>
-        </ul>
-        <p>
-          <span>など志高い方を積極的に採用しています。</span>
-        </p>
+      <div class="home__boxWrapper">
+        <div class="home__msg--bottom noTab">
+          <p><span class="t-bunkyu">La Goon</span><span>では</span></p>
+          <ul>
+            <li>・稼いで大物になりたい</li>
+            <li>・自分のお店を持ちたい</li>
+            <li>・お金持ちになりたい</li>
+            <li>・ナイトワークビジネスのノウハウを学びたい</li>
+          </ul>
+          <p>
+            <span>など志高い方を積極的に採用しています。</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>

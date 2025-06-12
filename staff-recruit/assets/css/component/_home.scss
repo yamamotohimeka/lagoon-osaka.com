@@ -262,6 +262,9 @@
       padding: 24rem 20rem;
       border: 1px solid #fff;
       position: relative;
+      @include pc {
+        margin-bottom: 32rem;
+      }
       @include tab {
         width: 100%;
         margin-bottom: 32rem;
@@ -313,6 +316,10 @@
       border:1px solid #000;
       position: relative;
       transform: translate( 110%, -20% );
+      @include pc {
+        width: clamp(  300px, 48vw, 540px );
+        transform: translate( 0, -40% );
+      }
       @include tab {
         width: 100%;
         transform: translate( 0, 0 );
@@ -364,6 +371,12 @@
           line-height: calc( 38 / 27 );
         }
       }
+    }
+  }
+  &__boxWrapper{
+    @include pc {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
