@@ -1,44 +1,6 @@
 <?php
 $path = './';
 $url = 'https://lagoon.tribe-webtest.xyz/staff-recruit/';
-
-session_start();
-header('X-Frame-Options: DENY');
-$token = sha1(uniqid(rand(), true));
-$_SESSION['key'] = $token;
-
-$RECAPTUER = $_ENV["V3_SECRETKEY"];
-$message = null;
-
-if (isset($_REQUEST["recaptchaToken"]) == true)  /* 送信ボタンが押された ? */ {
-  /** トークンチェック */
-  $token = $_REQUEST["recaptchaToken"];
-
-  if (token_chk($token) == true)  /* トークンチェックOK */ {
-    $message = "<p class=\"OK\">reCAPTCHAチェックOKです。</p>";
-  } else {
-    $message = "<p class=\"NG\">reCAPTCHAチェックNGです。</p>";
-  }
-}
-
-function token_chk($token)
-{
-  global $RECAPTUER;
-
-  /** ステータス初期化 */
-  $sts = false;
-
-  $result = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTUER}&response=${token}");
-  $chk = json_decode($result);
-
-  if ($chk->success == true)  /* トークンエラー */ {
-    $sts = true;
-  }
-
-  /** 処理終了 */
-  return $sts;
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
