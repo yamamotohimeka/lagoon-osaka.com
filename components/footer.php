@@ -99,7 +99,7 @@
     </a>
   </div>
 
-  <div class="tab" style="padding-bottom:120px;">
+  <div class="tab">
     <p style="text-align: center; padding-bottom: 3px;margin: 0;">
       <a rel="nofollow" href="https://mens-qzin.jp/" target="_blank"><img
           src="https://mens-qzin.jp/assets/img/entry/pc/link/mens200_40.png" width="200" height="40" border="0"
@@ -126,6 +126,14 @@
           alt="稼げる男性高収入求人・アルバイトはメンズバニラ"></a>
     </p>
   </div>
+
+  <ul class="footer__banner--container">
+    <li>
+      <a rel="nofollow" href="https://kansai.qzin.jp/lagoonk/?v=official" target="_blank">
+        <img src="https://ad.qzin.jp/img/vanilla468-60.gif" alt="ラグーンで稼ぐならバニラ求人" border="0" />
+      </a>
+    </li>
+  </ul>
 
 </footer>
 
