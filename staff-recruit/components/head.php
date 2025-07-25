@@ -23,7 +23,6 @@ $url = 'https://lagoon.tribe-webtest.xyz/staff-recruit/';
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="icon" href="<?php echo $path; ?>assets/img/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
