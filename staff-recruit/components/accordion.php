@@ -2,7 +2,7 @@
 
 <?php foreach ($jobs as $job): ?>
   <section class="accordion">
-    <button class="accordion__button">
+    <button class="accordion__button fadeIn1">
       <p class="accordion__button--inner">
         <span class="text">
           <?php echo $job['職種']; ?>
@@ -12,7 +12,7 @@
     </button>
     <div class="accordion__inner">
       
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -120,7 +120,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-      <div class="accordion__inner--list">
+      <div class="accordion__inner--list fadeIn1">
         <div class="listInner">
           <div class="listName">
             <div class="listName__inner">

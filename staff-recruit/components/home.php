@@ -3,19 +3,19 @@
     <img src="<?php echo $path; ?>assets/img/homeBg_tab.webp" alt="">
   </div>
   <div class="container">
-    <h1 class="home__title">
+    <h1 class="home__title fadeIn1">
       <span class="home__title--text">MEN’S STAFF RECRUIT</span>
     </h1>
-    <p class="home__msg01">
+    <p class="home__msg01 fadeIn1">
       <span class="t-normal">あなたの働く先には</span><span class="t-bigger">高収入</span><span class="t-normal">を<br class="tab">掴み取れる</span><span class="t-bigger">チャンス</span><span class="t-normal">がある。</span>
     </p>
-    <p class="home__msg02">
+    <p class="home__msg02 fadeIn1">
       <span class="t-bigger">La Goon</span><span class="t-normal">ならそれができる!</span>
     </p>
-    <div class="home__copy">
+    <div class="home__copy fadeIn1">
       <p class="home__copy--main">
         <img src="<?php echo $path; ?>assets/img/copyMain.webp" alt="入社1年目でも月収35万円可能">
-      </p>
+      </p> 
       <p class="home__copy--sub img_res">
         <img src="<?php echo $path; ?>assets/img/copySub_tab.webp" alt="臨時昇給あり">
       </p>
@@ -23,7 +23,7 @@
         <img src="<?php echo $path; ?>assets/img/light.png" alt="">
       </p>
     </div>
-    <ul class="home__salary">
+    <ul class="home__salary fadeIn1">
       <li class="home__salary--list">
         <p class="t-white">
           <span>店長/幹部</span>
@@ -41,7 +41,7 @@
         </p>
       </li>
     </ul>
-    <ul class="home__feature">
+    <ul class="home__feature fadeIn1">
       <li class="home__feature--list">
         <span class="featureText">未経験大歓迎</span>
       </li>
@@ -62,7 +62,7 @@
       </li>
     </ul>
     <div class="home__msg">
-      <div class="home__msg--top">
+      <div class="home__msg--top fadeIn1">
         <p class="t-gold">昇格昇給はあなたのやる気次第</p>
         <p class="t-white">
           事業拡大中につき、高額給与でお待ちしています。<br>
@@ -72,7 +72,7 @@
         </p>
       </div>
       <div class="home__boxWrapper">
-        <div class="home__msg--bottom noTab">
+        <div class="home__msg--bottom noTab fadeIn1">
           <p><span class="t-bunkyu">La Goon</span><span>では</span></p>
           <ul>
             <li>・稼いで大物になりたい</li>
@@ -87,7 +87,7 @@
       </div>
     </div>
   </div>
-  <div class="home__msg--bottom tab">
+  <div class="home__msg--bottom tab fadeIn1">
     <p><span class="t-bunkyu">La Goon</span><span>では</span></p>
     <ul>
       <li>・稼いで大物になりたい</li>

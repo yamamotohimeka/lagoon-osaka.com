@@ -27,7 +27,7 @@
     ];
 
     foreach ($features as $feature): ?>
-      <section class="feature__section">
+      <section class="feature__section fadeIn1">
         <div class="feature__section--text">
           <p class="featureTitle">
             <?php echo $feature['title']; ?>
