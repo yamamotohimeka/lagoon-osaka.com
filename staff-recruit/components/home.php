@@ -12,11 +12,11 @@
     <p class="home__msg02 fadeIn1">
       <span class="t-bigger">La Goon</span><span class="t-normal">ならそれができる!</span>
     </p>
-    <div class="home__copy fadeIn1">
-      <p class="home__copy--main">
+    <div class="home__copy">
+      <p class="home__copy--main fadeIn1">
         <img src="<?php echo $path; ?>assets/img/copyMain.webp" alt="入社1年目でも月収35万円可能">
       </p> 
-      <p class="home__copy--sub img_res">
+      <p class="home__copy--sub img_res fadeIn1">
         <img src="<?php echo $path; ?>assets/img/copySub_tab.webp" alt="臨時昇給あり">
       </p>
       <p class="home__copy--light">
