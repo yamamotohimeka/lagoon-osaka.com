@@ -32,70 +32,24 @@
           </ul>
         </nav>
         <div class="footer__recruit">
-          <a target="_blank" href="../recruit" class="footer__link">
-            <p>求人サイト</p>
+          <a target="_blank" href="../recruit" class="footer__link footer__recruit--link">
+            女性求人サイト
+          </a>
+          <a target="_blank" href="../staff-recruit" class="footer__link footer__recruit--link">
+            スタッフ求人サイト
           </a>
         </div>
       </div>
-
-
     </div>
-    <div class="container tab">
-      <div class="footer__nav">
-        <ul class="footer__nav__list">
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>" class="footer__link">
-              <p>TOP</p>
-            </a>
-          </li>
-
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>girl.php" class="footer__link">
-              <p>女の子一覧
-              </p>
-            </a>
-          </li>
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>schedule.php" class="footer__link">
-              <p>出勤情報</p>
-            </a>
-          </li>
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>system.php" class="footer__link">
-              <p>システム</p>
-            </a>
-          </li>
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>event.php" class="footer__link">
-              <p>イベント</p>
-            </a>
-          </li>
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="<?php echo $path; ?>access.php" class="footer__link">
-              <p>アクセス</p>
-            </a>
-          </li>
-          <li class="border"></li>
-          <li class="footer__nav__list-link">
-            <a href="../recruit" class="footer__link" target="_blank">
-              <p>求人サイト</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 
 
   <div class="footer__recruit tab">
-    <a target="_blank" href="../recruit" class="footer__link">
-      <p>求人サイト</p>
+    <a target="_blank" href="../recruit" class="footer__link footer__recruit--link">
+      求人サイト
+    </a>
+    <a target="_blank" href="../staff-recruit" class="footer__link footer__recruit--link">
+      スタッフ求人サイト
     </a>
   </div>
 

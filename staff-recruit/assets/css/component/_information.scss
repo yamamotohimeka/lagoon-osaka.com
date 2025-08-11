@@ -1,0 +1,9 @@
+.information{
+  padding: 160rem 0;
+  @include tab {
+    padding: 80rem 0;
+  }
+  @include sp {
+    padding: 40rem 0;
+  }
+}

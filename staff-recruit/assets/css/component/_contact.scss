@@ -1,0 +1,74 @@
+.contact{
+  margin-bottom: 160rem;
+  @include tab {
+    margin-bottom: 80rem;
+  }
+  @include sp {
+    margin-bottom: 64rem;
+  }
+  &__contents{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20rem;
+    padding-top: 32rem;
+    @include tab {
+      grid-template-columns: repeat(1,1fr);
+    }
+    @include sp {
+      padding-top: 0;
+    }
+    &--box{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16rem 0;
+      border: 1px solid #fff;
+      border-radius: 16rem;
+      @include tab {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .boxTel{
+    gap: 16rem;
+  }
+  .box__title{
+    margin-bottom: 8rem;
+    font-family: $gothic;
+    font-size: 44rem;
+    font-weight: 700;
+    line-height: 1.4;
+    @include tab {
+      font-weight: 500;
+    }
+    @include sp {
+      font-size: 24rem;
+    }
+  }
+  .line-qr{
+    width: 30%;
+    margin: 0 auto 8rem;
+  }
+  .line-id{
+    font-family: $gothic;
+    font-size: 37rem;
+    font-weight: 400;
+    @include sp {
+      font-size: 18rem;
+    }
+  }
+  .tel-info{
+    width: 80%;
+  }
+  .tel-num{
+    font-family: $ryumin-medium;
+    font-weight: 500;
+    font-size: 88rem;
+    line-height: 1;
+    @include sp {
+      font-size: 48rem;
+    }
+  }
+}
