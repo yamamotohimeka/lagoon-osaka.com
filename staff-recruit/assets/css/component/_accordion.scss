@@ -67,12 +67,6 @@
       transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                   opacity 0.3s ease 0.1s,
                   transform 0.3s ease 0.1s;
-
-      &--smooth {
-        opacity: 1;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
     }
 
     .accordion__button {
@@ -90,16 +84,6 @@
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     transform: translateY(-10px);
-    &--smooth {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
-                  padding 0.3s ease,
-                  opacity 0.3s ease;
-      opacity: 0;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
     &--list{
       padding: 0 32rem;
       @include tab {
